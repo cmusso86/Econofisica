@@ -1,0 +1,965 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  portuguese,
+]{agujournal2019}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{url} %this package should fix any errors with URLs in refs.
+\usepackage{lineno}
+\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
+\usepackage{soul}
+\linenumbers
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Uma conversa filosófica sobre seções de Levy},
+  pdfauthor={Carolina Musso},
+  pdflang={pt},
+  pdfkeywords={Séries temporais, Teorema do Limite Central, Seções de
+Levy},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\draftfalse
+
+\begin{document}
+\title{Uma conversa filosófica sobre seções de Levy}
+
+\authors{Carolina Musso\affil{1}}
+\affiliation{1}{Universidade de Brasília, }
+\correspondingauthor{Carolina Musso}{cmusso86@gmail.com}
+
+
+\begin{abstract}
+Este trabalho revisita o Teorema Central do Limite (TCL) sob a ótica da
+complexidade, explorando suas generalizações em contextos de
+heterogeneidade, intermitência e caudas pesadas. Partimos da constatação
+de que a média aritmética e a normalidade perdem protagonismo
+estatístico em séries empíricas complexas, como as financeiras,
+ambientais ou fisiológicas. Discutimos o papel das distribuições
+estáveis, dos modelos multifractais (como o MMAR), do tempo estocástico
+e das cópulas na reconstrução da dependência e da agregação. O foco
+recai sobre o teorema das seções de Lévy, que propõe reordenar as
+observações por variância acumulada, oferecendo uma nova métrica de soma
+adaptativa. Demonstramos como essa abordagem supera limitações do TCL
+clássico, revelando a estrutura essencial dos dados e promovendo
+interpretações robustas em ambientes de alta volatilidade. Concluímos
+com implicações epistemológicas e sugestões para futuras pesquisas
+estatísticas em contextos reais dominados por extremos.
+\end{abstract}
+
+
+
+
+
+\section{Introdução}\label{introduuxe7uxe3o}
+
+Séries temporais financeiras frequentemente apresentam propriedades
+estatísticas que violam os pressupostos clássicos do Teorema Central do
+Limite (TCL), como a presença de autocorrelações, heterocedasticidade e
+distribuições com caudas pesadas. Tais características dificultam a
+aplicação direta de métodos baseados em somas de variáveis independentes
+e identicamente distribuídas. Para lidar com esse cenário, foi proposto
+o uso do \textbf{teorema das seções de Lévy}, uma generalização do TCL
+que busca restaurar a gaussianidade mesmo quando os dados apresentam
+forte dependência temporal e variância local variável.
+
+O conceito de \textbf{seções de Lévy} surge como uma construção teórica
+na qual se particiona uma sequência de variáveis aleatórias em blocos
+cujas variâncias condicionais acumuladas são controladas por um
+parâmetro positivo \(\tau\). Em vez de somar variáveis ao longo de
+janelas de tempo fixas, como no TCL tradicional, a soma é feita ao longo
+de subsequências cuja variância total atinge um limiar pré-estabelecido.
+Assim, cada ``seção'' representa um subconjunto de trajetória
+estatisticamente homogêneo em termos de volatilidade local.
+
+Essa ideia foi inicialmente motivada por observações empíricas em séries
+financeiras reais, onde a convergência à normalidade ocorre de forma
+extremamente lenta --- um fenômeno conhecido como \textbf{ultraslow
+convergence}. Trabalhos anteriores atribuíram essa lentidão à presença
+de autocorrelações lineares e não-lineares, propondo abordagens como os
+processos quasi-α-estáveis. No entanto, as seções de Lévy oferecem um
+passo adiante: ao reparametrizar a soma com base na variância acumulada,
+é possível obter convergência mais rápida à distribuição normal, mesmo
+em contextos de forte dependência estocástica.
+
+Diversos estudos empíricos demonstraram que o uso de seções de Lévy
+permite melhor estabilização de momentos estatísticos, como curtose e
+assimetria, além de preservar as propriedades multifractais dos sinais
+originais. Isso é particularmente útil para modelagem de ativos
+financeiros, onde estratégias baseadas em tempo aleatório (induzido
+pelas seções) se mostraram mais eficientes em termos de risco e retorno,
+quando comparadas a abordagens tradicionais baseadas em intervalos
+fixos.
+
+Em sua formulação teórica, o \textbf{teorema das seções de Lévy}
+estabelece que, sob hipóteses de médias condicionais nulas e controle da
+variância acumulada, a soma padronizada das variáveis pertencentes a uma
+seção de nível \(\tau\) converge em distribuição para uma normal padrão.
+Isso implica que:
+
+\[
+\frac{S_\tau}{\sqrt{\tau}} \xrightarrow{D} \mathcal{N}(0, 1)
+\]
+
+mesmo quando as variáveis originais não são independentes. Trata-se,
+portanto, de uma \textbf{generalização do Teorema Central do Limite},
+pois estende sua validade para cadeias de variáveis dependentes e com
+estrutura heterocedástica, desde que o somatório seja reorganizado em
+seções com variância acumulada controlada. Essa reinterpretação permite
+o uso de técnicas assintóticas em contextos anteriormente considerados
+fora do escopo do TCL clássico, ampliando significativamente seu alcance
+teórico e aplicado.
+
+A teoria das probabilidades, em sua formulação clássica, tende a tratar
+a variabilidade dos fenômenos como algo suavizável pela repetição. O
+Teorema Central do Limite (TCL) cristaliza essa visão: independentemente
+da distribuição original, a média de muitas observações tende a uma
+distribuição normal. Contudo, esse resultado depende de condições
+específicas --- como independência, variância finita e ausência de
+estrutura em escala --- que raramente se verificam em sistemas
+complexos.
+
+Com o avanço da modelagem estatística de fenômenos empíricos ---
+especialmente séries temporais financeiras, geofísicas e fisiológicas
+--- tornou-se evidente que há regimes estatísticos em que o TCL falha
+dramaticamente. São casos em que a média não é bem definida, a variância
+diverge, e eventos extremos dominam o comportamento agregado. Esses
+sistemas parecem ``atraídos'' não pela normalidade, mas por
+distribuições estáveis de cauda pesada, como as distribuições de Lévy,
+Pareto, Cauchy, entre outras. Como afirmou Mandelbrot, essas
+distribuições representam um segundo grande ponto de atração estatística
+--- um ``buraco negro'' alternativo à normalidade.
+
+Esse panorama é coerente com a ideia de que há dois regimes universais
+de agregação estatística: um regido pela normalidade (via TCL), e outro
+por distribuições estáveis --- ambos dotados de propriedades de
+invariância de escala. A escolha entre um regime ou outro não é apenas
+técnica, mas epistemológica: trata-se de como representamos a incerteza
+no mundo. Essa visão ganha contornos mais filosóficos em autores como
+Nassim Taleb, para quem o foco nos modelos gaussianos ignora as
+``caudas'' onde vivem os riscos mais catastróficos.
+
+Nesse contexto, os modelos multifractais e as seções de Lévy surgem como
+tentativas modernas de reconectar as ferramentas clássicas da
+estatística com a complexidade dos dados reais. Ambas as abordagens
+rejeitam a uniformidade de escalas e propõem modelos onde a própria
+noção de tempo é deformada, tornando possível a recuperação de
+propriedades gaussianas locais, sem apagar as estruturas de
+intermitência e os eventos raros que caracterizam as caudas pesadas. As
+seções de Lévy, em especial, permitem aplicar uma versão generalizada do
+TCL a sequências heterogêneas, através da organização dos dados por
+blocos de variância acumulada constante, o que preserva as estruturas
+multifractais e melhora a estabilidade estatística das inferências.
+
+Perfeito --- isso enriquece ainda mais sua análise, pois traz:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Copulas}: para entender \emph{dependência além da correlação
+  linear}, crucial quando se estuda caudas e comportamento conjunto
+  extremo.
+\item
+  \textbf{Condições de Lyapunov (e Lindeberg)}: como generalizações
+  modernas do TCL que permitem ir além da iid e assumem maior controle
+  sobre momentos --- criando uma ponte entre o TCL clássico e os casos
+  onde ele falha.
+\end{itemize}
+
+A seguir, proponho uma \textbf{versão expandida da Seção 1}, incluindo
+esses elementos com precisão conceitual e fluidez narrativa.
+
+\section{1. Do Teorema Central ao Caos Estatístico: Dois Pontos de
+Atração}\label{do-teorema-central-ao-caos-estatuxedstico-dois-pontos-de-atrauxe7uxe3o}
+
+O Teorema Central do Limite (TCL) é frequentemente apresentado como um
+dos pilares da estatística. Ele afirma que, sob certas condições ---
+como independência entre observações, variância finita e ausência de
+autocorrelação estrutural ---, a média de um número suficientemente
+grande de variáveis aleatórias converge em distribuição para uma normal.
+Essa convergência à normalidade explica a ampla aplicação de modelos
+gaussianos em diferentes domínios da ciência e engenharia.
+
+Contudo, à medida que a estatística moderna se depara com sistemas
+complexos --- como mercados financeiros, redes climáticas, dados
+biomédicos e tráfego em redes --- torna-se claro que tais condições são
+frequentemente violadas. As séries temporais empíricas nesses contextos
+revelam \textbf{caudas pesadas}, \textbf{volatilidade intermitente},
+\textbf{dependência de longo alcance} e \textbf{estruturas de correlação
+não lineares}, dificultando a aplicação direta do TCL clássico.
+
+Foi Benoît Mandelbrot quem, nas décadas de 1960 e 1990, propôs uma
+reavaliação dessa centralidade da normal. Em seus trabalhos sobre preços
+especulativos e, mais tarde, em \emph{Fractals and Scaling in Finance},
+ele argumentou que a normalidade não é o único ponto de atração
+estatístico possível. Há uma família mais ampla de \textbf{distribuições
+estáveis} --- as chamadas \textbf{α-estáveis} --- que permanecem
+invariantes sob soma, mesmo com variâncias infinitas. A normal é um caso
+particular com \(\alpha = 2\); para \(\alpha < 2\), emergem
+distribuições como a de Lévy e Cauchy, mais apropriadas para dados com
+flutuações extremas. Assim, Mandelbrot introduziu a ideia de que
+\textbf{as distribuições estáveis de cauda pesada constituem um segundo
+regime assintótico universal}, ao lado da normal.
+
+Essa ideia é formalizada matematicamente nas \textbf{generalizações do
+TCL}, como as condições de \textbf{Lyapunov} e \textbf{Lindeberg}, que
+estendem a aplicabilidade do teorema para variáveis não identicamente
+distribuídas. Essas condições fornecem critérios técnicos --- baseados
+em momentos ou na contribuição relativa de observações individuais ---
+para garantir a convergência à normalidade, mesmo em contextos menos
+restritivos. Em especial, a condição de Lyapunov, que exige que os
+momentos de ordem superior de cada termo da soma decaiam suficientemente
+rápido, abre espaço para análises onde a homogeneidade (iid) não é
+assumida. Ainda assim, tais condições \textbf{requerem momentos
+finitos}, e não se aplicam ao domínio das distribuições estáveis
+propriamente ditas.
+
+Outro aspecto crucial que desafia o TCL clássico é a \textbf{estrutura
+de dependência entre variáveis}. Enquanto o TCL tradicional lida bem com
+independência, muitas séries empíricas exibem \textbf{dependência não
+linear e assimétrica}, especialmente em eventos extremos. Para capturar
+essas relações, entra em cena o formalismo das \textbf{cópulas} ---
+funções que descrevem a dependência entre marginais de forma separada da
+forma das distribuições marginais. Cópulas possibilitam modelar a
+\textbf{dependência nas caudas}, distinguindo entre coocorrências de
+eventos extremos superiores ou inferiores, o que é fundamental para
+entender fenômenos como crises financeiras, picos de demanda ou colapsos
+de sistemas interdependentes.
+
+O uso de cópulas em combinação com distribuições estáveis ou
+multifractais permite capturar não apenas o comportamento marginal, mas
+também \textbf{a geometria da dependência multivariada} --- algo que
+modelos baseados em correlação linear não conseguem fazer. Essa
+abordagem se alinha às críticas feitas por autores como Nassim Taleb,
+para quem o verdadeiro risco está nas zonas negligenciadas pelas
+aproximações gaussianas. Em \emph{O Cisne Negro}, Taleb argumenta que o
+mundo real é dominado por eventos raros de alto impacto --- que escapam
+à estatística convencional --- e que assumir normalidade é ignorar a
+topografia real do risco.
+
+Reconhecer essa coexistência de regimes estatísticos --- normal e
+estável ---, e o papel da dependência estrutural e da heterogeneidade
+dos momentos, é essencial para avançar na modelagem de sistemas
+complexos. Ferramentas como os \textbf{modelos multifractais}, as
+\textbf{seções de Lévy}, e as \textbf{cópulas para dependência extrema}
+não apenas ampliam o escopo do TCL, mas oferecem uma releitura mais
+realista da variabilidade do mundo, capaz de capturar tanto o ordinário
+quanto o extraordinário.
+
+\section{2. Distribuições Estáveis e o Mundo das Caudas
+Pesadas}\label{distribuiuxe7uxf5es-estuxe1veis-e-o-mundo-das-caudas-pesadas}
+
+Distribuições estáveis formam uma classe de distribuições contínuas que
+generalizam a distribuição normal. Elas são definidas por uma
+propriedade essencial: \textbf{a estabilidade sob soma de variáveis
+aleatórias independentemente distribuídas}. Em outras palavras, se
+\(X_1, X_2, \dots, X_n\) são variáveis independentes com a mesma
+distribuição estável, então sua soma (devidamente reescalada e
+recentrada) seguirá uma distribuição da mesma família. Essa propriedade
+faz com que as distribuições estáveis sejam \textbf{candidatas naturais
+aos limites assintóticos} em teoremas do tipo central --- mesmo quando
+as condições do Teorema Central do Limite clássico não são atendidas.
+
+Formalmente, uma variável aleatória \(X\) segue uma \textbf{distribuição
+estável} \(S(\alpha, \beta, \gamma, \delta)\) se sua função
+característica é dada por:
+
+\[
+\phi_X(t) = 
+\begin{cases}
+\exp\left\{ -\gamma^\alpha |t|^\alpha \left[1 + i \beta \, \text{sign}(t) \, \tan\left(\frac{\pi \alpha}{2}\right)\right] + i\delta t \right\}, & \text{se } \alpha \neq 1 \\
+\exp\left\{ -\gamma |t| \left[1 + i \beta \frac{2}{\pi} \, \text{sign}(t) \, \ln|t|\right] + i\delta t \right\}, & \text{se } \alpha = 1
+\end{cases}
+\]
+
+onde:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha \in (0, 2]\) é o \textbf{índice de estabilidade} (ou
+  parâmetro de cauda),
+\item
+  \(\beta \in [-1,1]\) é o parâmetro de \textbf{simetria},
+\item
+  \(\gamma > 0\) é o \textbf{parâmetro de escala},
+\item
+  \(\delta \in \mathbb{R}\) é o \textbf{parâmetro de localização}.
+\end{itemize}
+
+Quando \(\alpha = 2\), obtemos a distribuição normal
+\(\mathcal{N}(\delta, 2\gamma^2)\), e quando \(\alpha = 1\) e
+\(\beta = 0\), obtemos a \textbf{Cauchy}. Para \(\alpha < 2\), a
+variância da distribuição é infinita; para \(\alpha < 1\), a média
+também deixa de existir. Essas distribuições, portanto, rompem com os
+pilares do TCL clássico, e exigem um enquadramento assintótico mais
+flexível --- o que é oferecido pelo chamado \textbf{Teorema Central
+Generalizado}.
+
+Esse teorema afirma que, se temos uma sequência de variáveis iid com
+caudas pesadas que obedecem a uma \textbf{lei de potência} com expoente
+\(\alpha \in (0,2)\), então a soma adequadamente normalizada dessa
+sequência \textbf{converge em distribuição para uma distribuição estável
+de parâmetro \(\alpha\)}, e não para a normal. Isso mostra que, longe de
+serem meras curiosidades teóricas, as distribuições estáveis são
+\textbf{os verdadeiros limites assintóticos de processos dominados por
+grandes flutuações} --- e, portanto, mais adequados para modelar
+fenômenos como:
+
+\begin{itemize}
+\tightlist
+\item
+  retornos financeiros com volatilidade explosiva,
+\item
+  cargas de tráfego em redes de computadores,
+\item
+  tremores de terra,
+\item
+  tempo entre transações de alta frequência,
+\item
+  ou picos de sinais biomédicos.
+\end{itemize}
+
+Além disso, o parâmetro \(\alpha\) tem uma interpretação direta: ele
+governa \textbf{a espessura das caudas} da distribuição. Quanto menor o
+valor de \(\alpha\), \textbf{mais pesadas} são as caudas, ou seja, maior
+a probabilidade de ocorrência de valores extremos. Essa característica
+está no centro do debate contemporâneo sobre \textbf{eventos raros e
+riscos extremos}, em que os modelos gaussianos falham justamente por
+subestimar a frequência e o impacto desses eventos.
+
+No entanto, trabalhar com distribuições estáveis traz desafios
+significativos. Como muitas vezes não possuem densidade fechada ou
+momentos finitos, as ferramentas estatísticas convencionais --- como
+média, desvio padrão ou testes baseados em momentos --- se tornam
+inadequadas ou enganosas. Isso exigiu o desenvolvimento de novas
+abordagens, como o uso de \textbf{quantis}, \textbf{estimadores
+robustos}, \textbf{funções características} e \textbf{métodos de
+simulação}, além da integração com técnicas como \textbf{cópulas} para
+modelagem da dependência multivariada em ambientes de caudas pesadas.
+
+Como discutido na seção anterior, Mandelbrot foi um dos primeiros a
+identificar esse descompasso entre teoria e prática na modelagem
+estatística, propondo que as distribuições estáveis fossem adotadas como
+nova base de análise para sistemas complexos. Esse paradigma não apenas
+fornece uma nova lente para enxergar a variabilidade empírica, como
+também prepara o terreno para abordagens mais sofisticadas --- como os
+\textbf{modelos multifractais} e as \textbf{seções de Lévy} --- que
+buscam reconciliar a complexidade das flutuações reais com estruturas
+matemáticas interpretáveis.
+
+\section{3. Multifractalidade, Tempo Estocástico e o Modelo
+MMAR}\label{multifractalidade-tempo-estocuxe1stico-e-o-modelo-mmar}
+
+Conforme vimos, as distribuições estáveis explicam a presença de caudas
+pesadas em sistemas reais e expandem os limites do Teorema Central do
+Limite (TCL). No entanto, elas ainda assumem certa homogeneidade
+estatística --- a distribuição permanece a mesma ao longo do tempo. Em
+muitos contextos empíricos, esse não é o caso: a \textbf{intensidade das
+flutuações varia em diferentes escalas}, com períodos calmos alternando
+com episódios de alta turbulência. Esse comportamento intermitente e
+autocorrelacionado em múltiplas escalas é característico de um fenômeno
+chamado \textbf{multifractalidade}.
+
+A multifractalidade estende a ideia de um fractal --- um objeto com
+estrutura auto-semelhante --- para o domínio estatístico. Em vez de uma
+única lei de escala, como ocorre em fractais monofractais (por exemplo,
+o passeio aleatório padrão), sistemas multifractais exibem \textbf{uma
+multiplicidade de leis de escala locais}, cada uma associada a um
+subconjunto do tempo ou do espaço. Essa estrutura é quantificada por
+espectros multifractais, como o espectro de singularidades
+\(f(\alpha)\), que descreve a distribuição das excentricidades locais de
+regularidade.
+
+Mandelbrot, Calvet e Fisher propuseram uma modelagem estatística que
+incorpora essa complexidade: o \textbf{MMAR (Multifractal Model of Asset
+Returns)}. Nesse modelo, os retornos de um ativo \(X(t)\) são
+representados como um \textbf{movimento browniano fracionário
+subordinado} por um \textbf{tempo multifractal} \(\theta(t)\), isto é:
+
+\[
+X(t) = B_H(\theta(t)),
+\]
+
+onde \(B_H\) é um movimento browniano com dependência temporal (via
+parâmetro de Hurst \(H\)), e \(\theta(t)\) é uma função de tempo
+estocástico construída a partir de cascatas multiplicativas. Essa
+subordinação permite que a variabilidade da série seja não apenas
+aleatória, mas também \textbf{multiescala} --- capturando a alternância
+entre calmaria e explosão de volatilidade.
+
+Embora o MMAR tenha sido originalmente desenvolvido para séries
+financeiras, suas ideias têm aplicações muito mais amplas. Fenômenos com
+\textbf{estrutura intermitente e multiescala} aparecem em várias áreas:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Hidrologia}: séries de vazão de rios e chuvas apresentam picos
+  abruptos alternando com longos períodos de estabilidade. A
+  multifractalidade ajuda a modelar a distribuição de eventos extremos e
+  a variabilidade em diferentes escalas temporais.
+\item
+  \textbf{Tráfego de internet e telecomunicações}: o fluxo de pacotes em
+  redes digitais mostra comportamento ``burst-like'', com rajadas de
+  atividade intensas separadas por períodos de baixa demanda. Modelos
+  multifractais foram aplicados para simular e prever congestionamentos
+  de rede.
+\item
+  \textbf{Geofísica e sismologia}: a liberação de energia em terremotos
+  ocorre em padrões multifractais, com tremores menores acumulando
+  tensão e eventos catastróficos concentrando energia em pontos
+  singulares da crosta.
+\item
+  \textbf{Fisiologia}: séries de intervalos RR (batimentos cardíacos) ou
+  de variação da frequência respiratória apresentam flutuações
+  intermitentes de diferentes intensidades. O estudo multifractal tem
+  sido útil para entender a complexidade do controle autonômico e
+  diferenças entre estados patológicos e saudáveis.
+\end{itemize}
+
+A chave conceitual do MMAR é a introdução de um \textbf{tempo
+multifractal}, que deforma o tempo cronológico e o substitui por uma
+métrica irregular, onde o tempo ``passa mais rápido'' em regiões
+turbulentas e ``mais devagar'' em regiões calmas. Essa deformação
+temporal remete diretamente à ideia de \textbf{seções de Lévy}, que
+também reparam a estrutura de agregação clássica para respeitar a
+heterogeneidade estatística local. Ambas as abordagens têm em comum a
+noção de que \textbf{não é suficiente observar a soma dos dados: é
+necessário respeitar sua geometria estatística interna.}
+
+Em termos práticos, o MMAR fornece uma estrutura que \textbf{generaliza
+o TCL dentro de um universo multifractal}: ao invés de supor
+variabilidade homogênea e usar a média como estatística central, ele
+admite uma multiplicidade de escalas, cada uma contribuindo de modo
+distinto para a estrutura agregada. Isso abre caminho para novos métodos
+de previsão, avaliação de risco e análise estatística robusta, tanto em
+finanças quanto em sistemas naturais e tecnológicos.
+
+\section{4. Seções de Lévy --- Uma Releitura do TCL em Ambientes
+Hostis}\label{seuxe7uxf5es-de-luxe9vy-uma-releitura-do-tcl-em-ambientes-hostis}
+
+O Teorema Central do Limite tradicional presume que cada termo da soma
+contribui de maneira ``regular'' para o todo: as variáveis são iid (ou,
+no máximo, obedecem a condições como as de Lyapunov ou Lindeberg) e,
+portanto, a agregação preserva simetria, variância finita e crescimento
+previsível. No entanto, esse cenário entra em colapso diante de
+\textbf{séries com heterogeneidade intensa}, nas quais alguns termos
+possuem variâncias significativamente maiores que outros --- ou
+flutuações intermitentes e imprevisíveis ao longo do tempo.
+
+Para lidar com essas situações, Figueiredo, Gleria, Matsushita e
+colaboradores (2004--2022) propuseram um instrumento conceitual e
+computacional elegante: o \textbf{teorema das seções de Lévy}. Em vez de
+considerar a série \(X_1, X_2, \dots, X_n\) como uma sequência rígida e
+arbitrária de observações, os autores propõem \textbf{reordená-la
+segundo a variância acumulada}: a cada passo, adiciona-se à soma o termo
+que mais contribui para a variabilidade total, medindo-a localmente. O
+resultado é uma nova série ordenada por impacto estatístico --- as
+chamadas \textbf{seções de Lévy}.
+
+Formalmente, dada uma sequência de termos \(\{X_i\}_{i=1}^n\),
+constroem-se subsequências de somas parciais
+\(S_k = \sum_{i=1}^k X_{\pi(i)}\), onde \(\pi\) é uma permutação que
+organiza os termos de acordo com seu peso na variância cumulativa. Essa
+construção remete à ideia de \textbf{``filtrar a essência da soma''} ---
+privilegiando os termos que mais afetam a dispersão total do sistema.
+
+A genialidade dessa abordagem está no fato de que ela \textbf{não é
+puramente técnica ou algorítmica}: é uma \textbf{releitura filosófica do
+TCL}. Em vez de assumir que toda soma tende à normalidade (ou à
+estabilidade), ela pergunta: \textbf{quais são os termos que realmente
+governam o comportamento assintótico?} Em séries empíricas com forte
+intermitência, como os retornos financeiros, as intensidades sísmicas,
+os picos de tráfego ou até a atividade neuronal, \textbf{a média
+aritmética pode ser estatisticamente irrelevante}, pois está dominada
+por poucos termos extremos. As seções de Lévy recuperam esse domínio
+estrutural e o incorporam na análise.
+
+Os autores demonstram que, ao aplicar essa ordenação, a soma parcial
+resultante apresenta propriedades mais estáveis e informativas. Em
+particular, quando comparadas com as somas cronológicas ou parciais
+convencionais, as somas de Lévy exibem:
+
+\begin{itemize}
+\tightlist
+\item
+  convergência mais rápida,
+\item
+  menor erro quadrático médio,
+\item
+  maior robustez em amostras pequenas,
+\item
+  e uma aproximação mais fiel do comportamento real da série.
+\end{itemize}
+
+Além disso, as seções de Lévy permitem \textbf{comparar séries de
+natureza diferente} em uma base comum, pois revelam a estrutura
+subjacente de variabilidade --- o que é particularmente útil em análise
+de séries heteroscedásticas.
+
+Essa abordagem também serve como uma ponte natural para modelos
+multifractais, pois ambos compartilham a ideia de que \textbf{a
+importância estatística de um evento não está apenas em seu valor, mas
+na escala em que ele ocorre}. As seções de Lévy podem ser interpretadas
+como uma reconstrução da série original sob uma nova métrica temporal,
+similar à deformação do tempo no modelo MMAR --- só que agora construída
+a partir da própria estrutura empírica da variância.
+
+Mais do que uma técnica alternativa, as seções de Lévy propõem uma
+\textbf{redefinição do processo de agregação estatística}, desafiando a
+hegemonia da média aritmética e oferecendo um novo ponto de entrada para
+o estudo de sistemas complexos. Essa proposta se alinha à tradição
+iniciada por Mandelbrot: em vez de forçar a normalidade aos dados,
+devemos \textbf{rever os próprios fundamentos da soma}, reconhecendo
+que, em ambientes hostis e multifacetados, \textbf{o todo é governado
+por poucos, mas intensos}.
+
+\section{5. Comparações Empíricas --- Quando a Média Não é o
+Centro}\label{comparauxe7uxf5es-empuxedricas-quando-a-muxe9dia-nuxe3o-uxe9-o-centro}
+
+A intuição por trás das seções de Lévy --- dar prioridade estatística
+aos termos que mais contribuem para a variância --- ganha força quando
+testada em dados reais. Nos trabalhos de Figueiredo, Castro, Fonseca,
+Matsushita e outros (2004--2022), essa técnica é aplicada a diferentes
+tipos de séries temporais para mostrar que \textbf{a agregação
+tradicional pode ocultar a estrutura essencial da variabilidade},
+enquanto a abordagem via seções de Lévy a revela.
+
+Um dos primeiros experimentos apresentados (Figueiredo et al., 2004)
+envolve séries simuladas com heterocedasticidade controlada. A partir de
+processos do tipo \(X_t = Z_t \cdot \sigma_t\), onde \(Z_t \sim N(0,1)\)
+e \(\sigma_t\) segue uma lei de potência ou uma sequência binária
+alternante (como em uma cascata multifractal), os autores mostram que a
+média aritmética e a soma parcial tradicional \textbf{não capturam
+adequadamente os regimes de alta variância}. As seções de Lévy, por
+outro lado, produzem uma curva suavizada que preserva a ordem de
+grandeza da variabilidade dominante --- como se ``limassem o ruído'' e
+mantivessem o esqueleto estatístico da série.
+
+Esse fenômeno aparece com ainda mais força quando se trabalha com
+\textbf{séries financeiras reais}, como os retornos do Ibovespa ou taxas
+de câmbio (Figueiredo et al., 2007, 2022). Ao aplicar as seções de Lévy,
+observou-se que:
+
+\begin{itemize}
+\tightlist
+\item
+  os picos de volatilidade tornam-se evidentes e organizados,
+\item
+  a média aritmética, muitas vezes nula ou enganosa, é substituída por
+  um perfil cumulativo que \textbf{dá peso ao que realmente importa} (os
+  retornos extremos),
+\item
+  as métricas de erro --- como o erro quadrático médio (RMSE) ---
+  \textbf{são significativamente menores} nas previsões com base em
+  somas de Lévy do que com as tradicionais.
+\end{itemize}
+
+Em termos visuais, a diferença é marcante: enquanto a média cronológica
+se espalha com ruído, a média baseada nas seções de Lévy \textbf{revela
+uma estrutura ``esquelética'' de flutuações dominantes}, oferecendo uma
+espécie de extrato estatístico da série.
+
+Os autores ainda exploram aplicações em \textbf{dados ambientais}, como
+séries de temperatura e precipitação, mostrando que as seções de Lévy
+capturam melhor os eventos extremos e sazonais do que os modelos
+aditivos convencionais. Essa observação abre caminho para o uso da
+técnica em contextos como:
+
+\begin{itemize}
+\tightlist
+\item
+  previsão de cheias e secas (hidrologia),
+\item
+  detecção de falhas intermitentes em equipamentos (engenharia),
+\item
+  caracterização de padrões de sono e batimentos cardíacos com
+  instabilidade (fisiologia),
+\item
+  e monitoramento de eventos extremos em sistemas ecológicos ou
+  epidemiológicos.
+\end{itemize}
+
+Outro aspecto relevante é que o método das seções de Lévy \textbf{não
+depende de um modelo paramétrico pré-definido}, o que o torna atraente
+para aplicações com dados pouco estruturados ou com incerteza sobre a
+forma da distribuição. Em ambientes onde a distribuição pode mudar ao
+longo do tempo (nonstationarity), ou onde os momentos são instáveis
+(como no regime das distribuições estáveis), as seções de Lévy funcionam
+como uma estratégia adaptativa e robusta de agregação.
+
+Por fim, os experimentos computacionais realizados pelos autores indicam
+que, mesmo com amostras pequenas ou moderadas, as seções de Lévy
+fornecem estimativas mais robustas, sugerindo que a técnica pode ser
+útil \textbf{em situações com poucos dados --- justamente onde os
+modelos tradicionais são mais frágeis}.
+
+Esses achados reforçam a ideia de que, em sistemas intermitentes,
+heterogêneos ou dominados por caudas pesadas, \textbf{a média aritmética
+perde seu protagonismo estatístico}, e técnicas como as seções de Lévy,
+ao priorizarem a variância acumulada, assumem o papel de desvelar o que
+os dados efetivamente nos dizem.
+
+\section{6. Implicações para Teoria e Prática
+Estatística}\label{implicauxe7uxf5es-para-teoria-e-pruxe1tica-estatuxedstica}
+
+Ao longo das últimas seções, vimos emergir um panorama em que os pilares
+clássicos da estatística --- como o Teorema Central do Limite (TCL), a
+média aritmética e a suposição de variância finita --- revelam suas
+limitações diante de sistemas complexos e intermitentes. Esse quadro,
+longe de desqualificar a estatística tradicional, aponta para a
+necessidade de \textbf{ampliar seu repertório conceitual e técnico}. As
+distribuições estáveis, os modelos multifractais e as seções de Lévy
+propõem exatamente isso: \textbf{uma nova gramática estatística para um
+mundo em que o caos é a norma}.
+
+\subsection{6.1 Generalizações do Teorema Central do
+Limite}\label{generalizauxe7uxf5es-do-teorema-central-do-limite}
+
+O Teorema Central do Limite clássico pressupõe condições como
+independência, variância finita e contribuição regular dos termos da
+soma. Em contextos reais --- especialmente em séries financeiras,
+ambientais, fisiológicas e geofísicas --- essas condições raramente são
+plenamente atendidas. Modelos de cauda pesada violam a finitude da
+variância, e estruturas intermitentes quebram a homogeneidade temporal.
+
+Para dar conta desses casos, surgem generalizações como:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{O TCL para distribuições α-estáveis}, em que a normalidade é
+  substituída por distribuições como Cauchy ou Lévy.
+\item
+  \textbf{A condição de Lyapunov}, que permite alguma heterogeneidade,
+  desde que a contribuição dos termos com variância elevada diminua
+  suficientemente rápido.
+\item
+  \textbf{A condição de Lindeberg}, mais fraca, mas ainda exigente
+  quando há flutuações dominadas por poucos eventos extremos.
+\item
+  E, finalmente, as \textbf{seções de Lévy}, que propõem uma reordenação
+  adaptativa da soma --- abrindo mão da cronologia em favor da
+  significância estatística.
+\end{itemize}
+
+Essas generalizações, cada uma a seu modo, \textbf{relaxam a rigidez do
+TCL clássico}, permitindo que convergências ocorrem sob formas mais
+diversas e realistas.
+
+\subsection{6.2 Cópulas e Dependência
+Multivariada}\label{cuxf3pulas-e-dependuxeancia-multivariada}
+
+Outro ponto central diz respeito à modelagem de dependência. Em sistemas
+com caudas pesadas e intermitência, a dependência não é apenas linear ou
+de primeira ordem --- ela pode ser assimétrica, localizada em regiões de
+extremos, e manifestar-se em múltiplas escalas temporais. Cópulas
+fornecem um instrumento poderoso para separar \textbf{a estrutura de
+dependência da forma marginal das distribuições}.
+
+Em contextos multifractais ou com seções de Lévy, cópulas podem ser
+usadas para modelar:
+
+\begin{itemize}
+\tightlist
+\item
+  a coocorrência de picos em diferentes séries (como precipitação e
+  vazão),
+\item
+  a sincronização entre ativos com regimes de volatilidade acoplados,
+\item
+  ou a propagação de riscos em sistemas interconectados.
+\end{itemize}
+
+Mais ainda, em distribuições α-estáveis multivariadas, a dependência
+entre componentes não se expressa via covariância, mas por estruturas
+angulares ou espectrais --- o que exige cópulas especializadas, como as
+\textbf{cópulas t} ou cópulas baseadas em séries de Lévy.
+
+\subsection{6.3 Estatística além da
+Média}\label{estatuxedstica-aluxe9m-da-muxe9dia}
+
+Uma das mensagens mais fortes que emergem desta discussão é que
+\textbf{a média pode não ser o centro estatístico de sistemas
+complexos}. Ela pode existir formalmente, mas ser irrelevante do ponto
+de vista informacional --- especialmente em séries com flutuações de
+grande amplitude e caudas densas.
+
+Técnicas como:
+
+\begin{itemize}
+\tightlist
+\item
+  o uso de \textbf{quantis},
+\item
+  o foco em \textbf{funções características} em vez de momentos,
+\item
+  estimativas robustas,
+\item
+  e especialmente \textbf{reordenações por variância acumulada}, como
+  nas seções de Lévy,
+\end{itemize}
+
+surgem como alternativas metodológicas para capturar o que realmente
+governa os dados.
+
+Essa mudança de perspectiva implica uma reformulação epistemológica:
+\textbf{em vez de perguntar ``qual é a média?''}, passamos a perguntar
+\textbf{``quais são os termos que moldam o comportamento da soma?''}.
+
+\subsection{6.4 Riscos Extremos e Fragilidade
+Estatística}\label{riscos-extremos-e-fragilidade-estatuxedstica}
+
+Como destacado por Taleb (2007), eventos de cauda --- aqueles que
+ocorrem raramente, mas têm alto impacto --- são subestimados por modelos
+gaussianos. As ferramentas discutidas aqui fornecem \textbf{antídotos
+conceituais contra essa fragilidade}:
+
+\begin{itemize}
+\tightlist
+\item
+  distribuições estáveis acomodam tais eventos naturalmente;
+\item
+  modelos multifractais os integram como parte da estrutura;
+\item
+  seções de Lévy os destacam na própria construção da soma.
+\end{itemize}
+
+Mais do que isso: essas abordagens não apenas modelam os extremos ---
+elas \textbf{os reconhecem como centrais}, não periféricos, na dinâmica
+dos sistemas.
+
+\section{Conclusão}\label{conclusuxe3o}
+
+Ao longo deste trabalho, revisitamos o Teorema Central do Limite não
+apenas como um resultado técnico da estatística matemática, mas como uma
+\textbf{narrativa epistemológica sobre o comportamento coletivo de
+sistemas complexos}. Esse ponto de partida nos levou a explorar
+\textbf{os limites e as generalizações do TCL}, revelando que, em muitos
+contextos reais, os pressupostos clássicos --- como independência,
+variância finita e homogeneidade --- falham de modo sistemático.
+
+Distribuições α-estáveis, cópulas, modelos multifractais e, em especial,
+as \textbf{seções de Lévy} surgem como ferramentas conceituais e
+técnicas que \textbf{reconstroem a agregação estatística em ambientes
+hostis}, onde a média não representa o centro, e os eventos extremos não
+são ruído, mas estrutura.
+
+As seções de Lévy se destacam por sua simplicidade e potência: ao
+reordenar as observações segundo variância acumulada, elas tornam
+visível a arquitetura interna da variabilidade de uma série. Em lugar da
+média cronológica, temos um \textbf{esqueleto estatístico revelado pelas
+flutuações dominantes}, que preserva a coerência da informação mesmo em
+contextos intermitentes ou multifractais.
+
+Essa abordagem ressoa com propostas como o modelo MMAR de Mandelbrot,
+Calvet e Fisher, em que o tempo é deformado por cascatas
+multiplicativas. Em ambos os casos, abandona-se a ideia de uma
+cronologia regular e homogênea para adotar uma \textbf{métrica
+adaptativa, construída a partir do próprio comportamento empírico dos
+dados}.
+
+Mais do que alternativas técnicas, essas ideias representam \textbf{um
+deslocamento de paradigma estatístico}: da centralidade da média para a
+estrutura das caudas; da homogeneidade para a multiescala; do ruído para
+a intermitência; da soma cronológica para a soma por importância.
+Trata-se de \textbf{uma estatística centrada na complexidade}, e não na
+simplificação.
+
+Do ponto de vista prático, as implicações são amplas. Em finanças, elas
+tocam o cerne da avaliação de risco e da previsão de volatilidade. Em
+séries ambientais, abrem caminho para análise robusta de eventos
+extremos. Em fisiologia, ajudam a distinguir padrões saudáveis de
+disfunções por meio da variabilidade multiescala. Em engenharia de
+dados, oferecem critérios alternativos para ordenação, agregação e
+compressão de sinais.
+
+Para a pesquisa futura, algumas trilhas promissoras incluem:
+
+\begin{itemize}
+\tightlist
+\item
+  a integração entre seções de Lévy e técnicas de aprendizado de
+  máquina,
+\item
+  o uso de cópulas multifractais para modelar dependência em regimes
+  extremos,
+\item
+  a reformulação de testes estatísticos clássicos à luz dessas
+  estruturas (por exemplo, testes de média ou homogeneidade com seções
+  de Lévy),
+\item
+  e o estudo da relação entre tempo multifractal e medidas de entropia
+  adaptativa.
+\end{itemize}
+
+Por fim, a lição mais profunda talvez seja epistemológica:
+\textbf{entender a estatística não como um conjunto fixo de ferramentas,
+mas como uma linguagem em evolução}, que se adapta aos sistemas que
+busca compreender. Em tempos de complexidade crescente, essa linguagem
+precisa ser, ela mesma, complexa --- e isso inclui reconhecer que a
+normalidade é uma exceção elegante, mas nem sempre a regra do mundo.
+
+
+
+
+\end{document}
