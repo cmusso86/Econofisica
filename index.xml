@@ -1,64 +1,38 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
 and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
-
 <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
-
-<front>
-
-
-<article-meta>
-
-
-<title-group>
-<article-title>Uma conversa filosófica sobre seções de
+  <front>
+    <article-meta>
+      <title-group>
+        <article-title>Uma conversa filosófica sobre seções de
 Levy</article-title>
-<subtitle>Generalizações do TLC</subtitle>
-</title-group>
-
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-8107-6458</contrib-id>
-<name>
-<surname>Musso</surname>
-<given-names>Carolina</given-names>
-</name>
-<string-name>Carolina Musso</string-name>
-
-<email>cmusso86@gmail.com</email>
-<role>Mestranda PPGEST</role>
-<xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1">
-<institution-wrap>
-<institution>Universidade de Brasília</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1">cmusso86@gmail.com</corresp>
-</author-notes>
-
-
-
-
-
-
-
-
-
-<history></history>
-
-
-<abstract>
+        <subtitle>Generalizações do TLC</subtitle>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <contrib-id contrib-id-type="orcid">0000-0002-8107-6458</contrib-id>
+          <name>
+            <surname>Musso</surname>
+            <given-names>Carolina</given-names>
+          </name>
+          <string-name>Carolina Musso</string-name>
+          <email>cmusso86@gmail.com</email>
+          <role>Mestranda PPGEST</role>
+          <xref ref-type="aff" rid="aff-1">a</xref>
+          <xref ref-type="corresp" rid="cor-1">*</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff-1">
+        <institution-wrap>
+          <institution>Universidade de Brasília</institution>
+        </institution-wrap>
+      </aff>
+      <author-notes>
+        <corresp id="cor-1">cmusso86@gmail.com</corresp>
+      </author-notes>
+      <history/>
+      <abstract>
 Este trabalho revisita o Teorema Central do Limite (TCL) sob a ótica da
 complexidade, explorando suas generalizações em contextos de
 heterogeneidade, intermitência e caudas pesadas. Partimos da constatação
@@ -75,23 +49,17 @@ interpretações robustas em ambientes de alta volatilidade. Concluímos
 com implicações epistemológicas e sugestões para futuras pesquisas
 estatísticas em contextos reais dominados por extremos.
 </abstract>
-<kwd-group kwd-group-type="author">
-<kwd>Séries temporais</kwd>
-<kwd>Teorema do Limite Central</kwd>
-<kwd>Seções de Levy</kwd>
-</kwd-group>
-
-
-
-
-</article-meta>
-
-</front>
-
-<body>
-<sec id="introdução">
-  <title>1 Introdução</title>
-  <p>Séries temporais financeiras frequentemente apresentam propriedades
+      <kwd-group kwd-group-type="author">
+        <kwd>Séries temporais</kwd>
+        <kwd>Teorema do Limite Central</kwd>
+        <kwd>Seções de Levy</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="introdução">
+      <title>1 Introdução</title>
+      <p>Séries temporais financeiras frequentemente apresentam propriedades
   estatísticas que violam os pressupostos clássicos do Teorema Central
   do Limite (TCL), como a presença de autocorrelações,
   heterocedasticidade e distribuições com caudas pesadas. Tais
@@ -101,18 +69,16 @@ estatísticas em contextos reais dominados por extremos.
   de Lévy</bold>, uma generalização do TCL que busca restaurar a
   gaussianidade mesmo quando os dados apresentam forte dependência
   temporal e variância local variável.</p>
-  <p>O conceito de <bold>seções de Lévy</bold> surge como uma construção
+      <p>O conceito de <bold>seções de Lévy</bold> surge como uma construção
   teórica na qual se particiona uma sequência de variáveis aleatórias em
   blocos cujas variâncias condicionais acumuladas são controladas por um
-  parâmetro positivo <inline-formula><alternatives>
-  <tex-math><![CDATA[\tau]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>τ</mml:mi></mml:math></alternatives></inline-formula>.
+  parâmetro positivo <inline-formula><alternatives><tex-math><![CDATA[\tau]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>τ</mml:mi></mml:math></alternatives></inline-formula>.
   Em vez de somar variáveis ao longo de janelas de tempo fixas, como no
   TCL tradicional, a soma é feita ao longo de subsequências cuja
   variância total atinge um limiar pré-estabelecido. Assim, cada “seção”
   representa um subconjunto de trajetória estatisticamente homogêneo em
   termos de volatilidade local.</p>
-  <p>Essa ideia foi inicialmente motivada por observações empíricas em
+      <p>Essa ideia foi inicialmente motivada por observações empíricas em
   séries financeiras reais, onde a convergência à normalidade ocorre de
   forma extremamente lenta — um fenômeno conhecido como <bold>ultraslow
   convergence</bold>. Trabalhos anteriores atribuíram essa lentidão à
@@ -122,7 +88,7 @@ estatísticas em contextos reais dominados por extremos.
   na variância acumulada, é possível obter convergência mais rápida à
   distribuição normal, mesmo em contextos de forte dependência
   estocástica.</p>
-  <p>Diversos estudos empíricos demonstraram que o uso de seções de Lévy
+      <p>Diversos estudos empíricos demonstraram que o uso de seções de Lévy
   permite melhor estabilização de momentos estatísticos, como curtose e
   assimetria, além de preservar as propriedades multifractais dos sinais
   originais. Isso é particularmente útil para modelagem de ativos
@@ -130,19 +96,46 @@ estatísticas em contextos reais dominados por extremos.
   pelas seções) se mostraram mais eficientes em termos de risco e
   retorno, quando comparadas a abordagens tradicionais baseadas em
   intervalos fixos.</p>
-  <p>Em sua formulação teórica, o <bold>teorema das seções de
+      <p>Em sua formulação teórica, o <bold>teorema das seções de
   Lévy</bold> estabelece que, sob hipóteses de médias condicionais nulas
   e controle da variância acumulada, a soma padronizada das variáveis
-  pertencentes a uma seção de nível <inline-formula><alternatives>
-  <tex-math><![CDATA[\tau]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>τ</mml:mi></mml:math></alternatives></inline-formula>
+  pertencentes a uma seção de nível <inline-formula><alternatives><tex-math><![CDATA[\tau]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>τ</mml:mi></mml:math></alternatives></inline-formula>
   converge em distribuição para uma normal padrão. Isso implica que:</p>
-  <p><disp-formula><alternatives>
-  <tex-math><![CDATA[
+      <p>
+        <disp-formula>
+          <alternatives>
+            <tex-math><![CDATA[
   \frac{S_\tau}{\sqrt{\tau}} \xrightarrow{D} \mathcal{N}(0, 1)
   ]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mfrac><mml:msub><mml:mi>S</mml:mi><mml:mi>τ</mml:mi></mml:msub><mml:msqrt><mml:mi>τ</mml:mi></mml:msqrt></mml:mfrac><mml:mover><mml:mo>→</mml:mo><mml:mi>D</mml:mi></mml:mover><mml:mi>𝒩</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
-  <p>mesmo quando as variáveis originais não são independentes.
+            <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+              <mml:mrow>
+                <mml:mfrac>
+                  <mml:msub>
+                    <mml:mi>S</mml:mi>
+                    <mml:mi>τ</mml:mi>
+                  </mml:msub>
+                  <mml:msqrt>
+                    <mml:mi>τ</mml:mi>
+                  </mml:msqrt>
+                </mml:mfrac>
+                <mml:mover>
+                  <mml:mo>→</mml:mo>
+                  <mml:mi>D</mml:mi>
+                </mml:mover>
+                <mml:mi>𝒩</mml:mi>
+                <mml:mrow>
+                  <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                  <mml:mn>0</mml:mn>
+                  <mml:mo>,</mml:mo>
+                  <mml:mn>1</mml:mn>
+                  <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                </mml:mrow>
+              </mml:mrow>
+            </mml:math>
+          </alternatives>
+        </disp-formula>
+      </p>
+      <p>mesmo quando as variáveis originais não são independentes.
   Trata-se, portanto, de uma <bold>generalização do Teorema Central do
   Limite</bold>, pois estende sua validade para cadeias de variáveis
   dependentes e com estrutura heterocedástica, desde que o somatório
@@ -150,7 +143,7 @@ estatísticas em contextos reais dominados por extremos.
   reinterpretação permite o uso de técnicas assintóticas em contextos
   anteriormente considerados fora do escopo do TCL clássico, ampliando
   significativamente seu alcance teórico e aplicado.</p>
-  <p>A teoria das probabilidades, em sua formulação clássica, tende a
+      <p>A teoria das probabilidades, em sua formulação clássica, tende a
   tratar a variabilidade dos fenômenos como algo suavizável pela
   repetição. O Teorema Central do Limite (TCL) cristaliza essa visão:
   independentemente da distribuição original, a média de muitas
@@ -158,7 +151,7 @@ estatísticas em contextos reais dominados por extremos.
   depende de condições específicas — como independência, variância
   finita e ausência de estrutura em escala — que raramente se verificam
   em sistemas complexos.</p>
-  <p>Com o avanço da modelagem estatística de fenômenos empíricos —
+      <p>Com o avanço da modelagem estatística de fenômenos empíricos —
   especialmente séries temporais financeiras, geofísicas e fisiológicas
   — tornou-se evidente que há regimes estatísticos em que o TCL falha
   dramaticamente. São casos em que a média não é bem definida, a
@@ -168,7 +161,7 @@ estatísticas em contextos reais dominados por extremos.
   Lévy, Pareto, Cauchy, entre outras. Como afirmou Mandelbrot, essas
   distribuições representam um segundo grande ponto de atração
   estatística — um “buraco negro” alternativo à normalidade.</p>
-  <p>Esse panorama é coerente com a ideia de que há dois regimes
+      <p>Esse panorama é coerente com a ideia de que há dois regimes
   universais de agregação estatística: um regido pela normalidade (via
   TCL), e outro por distribuições estáveis — ambos dotados de
   propriedades de invariância de escala. A escolha entre um regime ou
@@ -177,7 +170,7 @@ estatísticas em contextos reais dominados por extremos.
   filosóficos em autores como Nassim Taleb, para quem o foco nos modelos
   gaussianos ignora as “caudas” onde vivem os riscos mais
   catastróficos.</p>
-  <p>Nesse contexto, os modelos multifractais e as seções de Lévy surgem
+      <p>Nesse contexto, os modelos multifractais e as seções de Lévy surgem
   como tentativas modernas de reconectar as ferramentas clássicas da
   estatística com a complexidade dos dados reais. Ambas as abordagens
   rejeitam a uniformidade de escalas e propõem modelos onde a própria
@@ -189,35 +182,35 @@ estatísticas em contextos reais dominados por extremos.
   dos dados por blocos de variância acumulada constante, o que preserva
   as estruturas multifractais e melhora a estabilidade estatística das
   inferências.</p>
-  <p>Perfeito — isso enriquece ainda mais sua análise, pois traz:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Copulas</bold>: para entender <italic>dependência além da
+      <p>Perfeito — isso enriquece ainda mais sua análise, pois traz:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Copulas</bold>: para entender <italic>dependência além da
       correlação linear</italic>, crucial quando se estuda caudas e
       comportamento conjunto extremo.</p>
-    </list-item>
-    <list-item>
-      <p><bold>Condições de Lyapunov (e Lindeberg)</bold>: como
+        </list-item>
+        <list-item>
+          <p><bold>Condições de Lyapunov (e Lindeberg)</bold>: como
       generalizações modernas do TCL que permitem ir além da iid e
       assumem maior controle sobre momentos — criando uma ponte entre o
       TCL clássico e os casos onde ele falha.</p>
-    </list-item>
-  </list>
-  <p>A seguir, proponho uma <bold>versão expandida da Seção 1</bold>,
+        </list-item>
+      </list>
+      <p>A seguir, proponho uma <bold>versão expandida da Seção 1</bold>,
   incluindo esses elementos com precisão conceitual e fluidez
   narrativa.</p>
-</sec>
-<sec id="do-teorema-central-ao-caos-estatístico-dois-pontos-de-atração">
-  <title>2 1. Do Teorema Central ao Caos Estatístico: Dois Pontos de
+    </sec>
+    <sec id="do-teorema-central-ao-caos-estatístico-dois-pontos-de-atração">
+      <title>2 1. Do Teorema Central ao Caos Estatístico: Dois Pontos de
   Atração</title>
-  <p>O Teorema Central do Limite (TCL) é frequentemente apresentado como
+      <p>O Teorema Central do Limite (TCL) é frequentemente apresentado como
   um dos pilares da estatística. Ele afirma que, sob certas condições —
   como independência entre observações, variância finita e ausência de
   autocorrelação estrutural —, a média de um número suficientemente
   grande de variáveis aleatórias converge em distribuição para uma
   normal. Essa convergência à normalidade explica a ampla aplicação de
   modelos gaussianos em diferentes domínios da ciência e engenharia.</p>
-  <p>Contudo, à medida que a estatística moderna se depara com sistemas
+      <p>Contudo, à medida que a estatística moderna se depara com sistemas
   complexos — como mercados financeiros, redes climáticas, dados
   biomédicos e tráfego em redes — torna-se claro que tais condições são
   frequentemente violadas. As séries temporais empíricas nesses
@@ -225,7 +218,7 @@ estatísticas em contextos reais dominados por extremos.
   intermitente</bold>, <bold>dependência de longo alcance</bold> e
   <bold>estruturas de correlação não lineares</bold>, dificultando a
   aplicação direta do TCL clássico.</p>
-  <p>Foi Benoît Mandelbrot quem, nas décadas de 1960 e 1990, propôs uma
+      <p>Foi Benoît Mandelbrot quem, nas décadas de 1960 e 1990, propôs uma
   reavaliação dessa centralidade da normal. Em seus trabalhos sobre
   preços especulativos e, mais tarde, em <italic>Fractals and Scaling in
   Finance</italic>, ele argumentou que a normalidade não é o único ponto
@@ -233,17 +226,13 @@ estatísticas em contextos reais dominados por extremos.
   <bold>distribuições estáveis</bold> — as chamadas
   <bold>α-estáveis</bold> — que permanecem invariantes sob soma, mesmo
   com variâncias infinitas. A normal é um caso particular com
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha = 2]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>;
-  para <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha < 2]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+  <inline-formula><alternatives><tex-math><![CDATA[\alpha = 2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>;
+  para <inline-formula><alternatives><tex-math><![CDATA[\alpha < 2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
   emergem distribuições como a de Lévy e Cauchy, mais apropriadas para
   dados com flutuações extremas. Assim, Mandelbrot introduziu a ideia de
   que <bold>as distribuições estáveis de cauda pesada constituem um
   segundo regime assintótico universal</bold>, ao lado da normal.</p>
-  <p>Essa ideia é formalizada matematicamente nas <bold>generalizações
+      <p>Essa ideia é formalizada matematicamente nas <bold>generalizações
   do TCL</bold>, como as condições de <bold>Lyapunov</bold> e
   <bold>Lindeberg</bold>, que estendem a aplicabilidade do teorema para
   variáveis não identicamente distribuídas. Essas condições fornecem
@@ -255,7 +244,7 @@ estatísticas em contextos reais dominados por extremos.
   análises onde a homogeneidade (iid) não é assumida. Ainda assim, tais
   condições <bold>requerem momentos finitos</bold>, e não se aplicam ao
   domínio das distribuições estáveis propriamente ditas.</p>
-  <p>Outro aspecto crucial que desafia o TCL clássico é a
+      <p>Outro aspecto crucial que desafia o TCL clássico é a
   <bold>estrutura de dependência entre variáveis</bold>. Enquanto o TCL
   tradicional lida bem com independência, muitas séries empíricas exibem
   <bold>dependência não linear e assimétrica</bold>, especialmente em
@@ -267,7 +256,7 @@ estatísticas em contextos reais dominados por extremos.
   de eventos extremos superiores ou inferiores, o que é fundamental para
   entender fenômenos como crises financeiras, picos de demanda ou
   colapsos de sistemas interdependentes.</p>
-  <p>O uso de cópulas em combinação com distribuições estáveis ou
+      <p>O uso de cópulas em combinação com distribuições estáveis ou
   multifractais permite capturar não apenas o comportamento marginal,
   mas também <bold>a geometria da dependência multivariada</bold> — algo
   que modelos baseados em correlação linear não conseguem fazer. Essa
@@ -277,7 +266,7 @@ estatísticas em contextos reais dominados por extremos.
   argumenta que o mundo real é dominado por eventos raros de alto
   impacto — que escapam à estatística convencional — e que assumir
   normalidade é ignorar a topografia real do risco.</p>
-  <p>Reconhecer essa coexistência de regimes estatísticos — normal e
+      <p>Reconhecer essa coexistência de regimes estatísticos — normal e
   estável —, e o papel da dependência estrutural e da heterogeneidade
   dos momentos, é essencial para avançar na modelagem de sistemas
   complexos. Ferramentas como os <bold>modelos multifractais</bold>, as
@@ -285,137 +274,246 @@ estatísticas em contextos reais dominados por extremos.
   extrema</bold> não apenas ampliam o escopo do TCL, mas oferecem uma
   releitura mais realista da variabilidade do mundo, capaz de capturar
   tanto o ordinário quanto o extraordinário.</p>
-</sec>
-<sec id="distribuições-estáveis-e-o-mundo-das-caudas-pesadas">
-  <title>3 2. Distribuições Estáveis e o Mundo das Caudas
+    </sec>
+    <sec id="distribuições-estáveis-e-o-mundo-das-caudas-pesadas">
+      <title>3 2. Distribuições Estáveis e o Mundo das Caudas
   Pesadas</title>
-  <p>Distribuições estáveis formam uma classe de distribuições contínuas
+      <p>Distribuições estáveis formam uma classe de distribuições contínuas
   que generalizam a distribuição normal. Elas são definidas por uma
   propriedade essencial: <bold>a estabilidade sob soma de variáveis
   aleatórias independentemente distribuídas</bold>. Em outras palavras,
-  se <inline-formula><alternatives>
-  <tex-math><![CDATA[X_1, X_2, \dots, X_n]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>
+  se <inline-formula><alternatives><tex-math><![CDATA[X_1, X_2, \dots, X_n]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>
   são variáveis independentes com a mesma distribuição estável, então
   sua soma (devidamente reescalada e recentrada) seguirá uma
   distribuição da mesma família. Essa propriedade faz com que as
   distribuições estáveis sejam <bold>candidatas naturais aos limites
   assintóticos</bold> em teoremas do tipo central — mesmo quando as
   condições do Teorema Central do Limite clássico não são atendidas.</p>
-  <p>Formalmente, uma variável aleatória <inline-formula><alternatives>
-  <tex-math><![CDATA[X]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
+      <p>Formalmente, uma variável aleatória <inline-formula><alternatives><tex-math><![CDATA[X]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>X</mml:mi></mml:math></alternatives></inline-formula>
   segue uma <bold>distribuição estável</bold>
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[S(\alpha, \beta, \gamma, \delta)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>S</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>α</mml:mi><mml:mo>,</mml:mo><mml:mi>β</mml:mi><mml:mo>,</mml:mo><mml:mi>γ</mml:mi><mml:mo>,</mml:mo><mml:mi>δ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  <inline-formula><alternatives><tex-math><![CDATA[S(\alpha, \beta, \gamma, \delta)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>S</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>α</mml:mi><mml:mo>,</mml:mo><mml:mi>β</mml:mi><mml:mo>,</mml:mo><mml:mi>γ</mml:mi><mml:mo>,</mml:mo><mml:mi>δ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
   se sua função característica é dada por:</p>
-  <p><disp-formula><alternatives>
-  <tex-math><![CDATA[
+      <p>
+        <disp-formula>
+          <alternatives>
+            <tex-math><![CDATA[
   \phi_X(t) = 
   \begin{cases}
   \exp\left\{ -\gamma^\alpha |t|^\alpha \left[1 + i \beta \, \text{sign}(t) \, \tan\left(\frac{\pi \alpha}{2}\right)\right] + i\delta t \right\}, & \text{se } \alpha \neq 1 \\
   \exp\left\{ -\gamma |t| \left[1 + i \beta \frac{2}{\pi} \, \text{sign}(t) \, \ln|t|\right] + i\delta t \right\}, & \text{se } \alpha = 1
   \end{cases}
   ]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>ϕ</mml:mi><mml:mi>X</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mtable><mml:mtr><mml:mtd columnalign="left" style="text-align: left"><mml:mo>exp</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>−</mml:mi><mml:msup><mml:mi>γ</mml:mi><mml:mi>α</mml:mi></mml:msup><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">|</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">|</mml:mo></mml:mrow><mml:mi>α</mml:mi></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>i</mml:mi><mml:mi>β</mml:mi><mml:mspace width="0.167em"></mml:mspace><mml:mtext mathvariant="normal">sign</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="0.167em"></mml:mspace><mml:mo>tan</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mfrac><mml:mrow><mml:mi>π</mml:mi><mml:mi>α</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:mfrac><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mi>i</mml:mi><mml:mi>δ</mml:mi><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mrow><mml:mtext mathvariant="normal">se </mml:mtext><mml:mspace width="0.333em"></mml:mspace></mml:mrow><mml:mi>α</mml:mi><mml:mo>≠</mml:mo><mml:mn>1</mml:mn></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="left" style="text-align: left"><mml:mo>exp</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>−</mml:mi><mml:mi>γ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">|</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">|</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>i</mml:mi><mml:mi>β</mml:mi><mml:mfrac><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mfrac><mml:mspace width="0.167em"></mml:mspace><mml:mtext mathvariant="normal">sign</mml:mtext><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="0.167em"></mml:mspace><mml:mo>ln</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">|</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">|</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mi>i</mml:mi><mml:mi>δ</mml:mi><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mrow><mml:mtext mathvariant="normal">se </mml:mtext><mml:mspace width="0.333em"></mml:mspace></mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
-  <p>onde:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p><inline-formula><alternatives>
-      <tex-math><![CDATA[\alpha \in (0, 2]]]></tex-math>
-      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>∈</mml:mo><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">]</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+            <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+              <mml:mrow>
+                <mml:msub>
+                  <mml:mi>ϕ</mml:mi>
+                  <mml:mi>X</mml:mi>
+                </mml:msub>
+                <mml:mrow>
+                  <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                  <mml:mi>t</mml:mi>
+                  <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                </mml:mrow>
+                <mml:mo>=</mml:mo>
+                <mml:mrow>
+                  <mml:mo stretchy="true" form="prefix">{</mml:mo>
+                  <mml:mtable>
+                    <mml:mtr>
+                      <mml:mtd columnalign="left" style="text-align: left">
+                        <mml:mo>exp</mml:mo>
+                        <mml:mrow>
+                          <mml:mo stretchy="true" form="prefix">{</mml:mo>
+                          <mml:mo>−</mml:mo>
+                          <mml:msup>
+                            <mml:mi>γ</mml:mi>
+                            <mml:mi>α</mml:mi>
+                          </mml:msup>
+                          <mml:msup>
+                            <mml:mrow>
+                              <mml:mo stretchy="true" form="prefix">|</mml:mo>
+                              <mml:mi>t</mml:mi>
+                              <mml:mo stretchy="true" form="postfix">|</mml:mo>
+                            </mml:mrow>
+                            <mml:mi>α</mml:mi>
+                          </mml:msup>
+                          <mml:mrow>
+                            <mml:mo stretchy="true" form="prefix">[</mml:mo>
+                            <mml:mn>1</mml:mn>
+                            <mml:mo>+</mml:mo>
+                            <mml:mi>i</mml:mi>
+                            <mml:mi>β</mml:mi>
+                            <mml:mspace width="0.167em"/>
+                            <mml:mtext mathvariant="normal">sign</mml:mtext>
+                            <mml:mrow>
+                              <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                              <mml:mi>t</mml:mi>
+                              <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                            </mml:mrow>
+                            <mml:mspace width="0.167em"/>
+                            <mml:mo>tan</mml:mo>
+                            <mml:mrow>
+                              <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                              <mml:mfrac>
+                                <mml:mrow>
+                                  <mml:mi>π</mml:mi>
+                                  <mml:mi>α</mml:mi>
+                                </mml:mrow>
+                                <mml:mn>2</mml:mn>
+                              </mml:mfrac>
+                              <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                            </mml:mrow>
+                            <mml:mo stretchy="true" form="postfix">]</mml:mo>
+                          </mml:mrow>
+                          <mml:mo>+</mml:mo>
+                          <mml:mi>i</mml:mi>
+                          <mml:mi>δ</mml:mi>
+                          <mml:mi>t</mml:mi>
+                          <mml:mo stretchy="true" form="postfix">}</mml:mo>
+                        </mml:mrow>
+                        <mml:mo>,</mml:mo>
+                      </mml:mtd>
+                      <mml:mtd columnalign="left" style="text-align: left">
+                        <mml:mrow>
+                          <mml:mtext mathvariant="normal">se </mml:mtext>
+                          <mml:mspace width="0.333em"/>
+                        </mml:mrow>
+                        <mml:mi>α</mml:mi>
+                        <mml:mo>≠</mml:mo>
+                        <mml:mn>1</mml:mn>
+                      </mml:mtd>
+                    </mml:mtr>
+                    <mml:mtr>
+                      <mml:mtd columnalign="left" style="text-align: left">
+                        <mml:mo>exp</mml:mo>
+                        <mml:mrow>
+                          <mml:mo stretchy="true" form="prefix">{</mml:mo>
+                          <mml:mo>−</mml:mo>
+                          <mml:mi>γ</mml:mi>
+                          <mml:mrow>
+                            <mml:mo stretchy="true" form="prefix">|</mml:mo>
+                            <mml:mi>t</mml:mi>
+                            <mml:mo stretchy="true" form="postfix">|</mml:mo>
+                          </mml:mrow>
+                          <mml:mrow>
+                            <mml:mo stretchy="true" form="prefix">[</mml:mo>
+                            <mml:mn>1</mml:mn>
+                            <mml:mo>+</mml:mo>
+                            <mml:mi>i</mml:mi>
+                            <mml:mi>β</mml:mi>
+                            <mml:mfrac>
+                              <mml:mn>2</mml:mn>
+                              <mml:mi>π</mml:mi>
+                            </mml:mfrac>
+                            <mml:mspace width="0.167em"/>
+                            <mml:mtext mathvariant="normal">sign</mml:mtext>
+                            <mml:mrow>
+                              <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                              <mml:mi>t</mml:mi>
+                              <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                            </mml:mrow>
+                            <mml:mspace width="0.167em"/>
+                            <mml:mo>ln</mml:mo>
+                            <mml:mrow>
+                              <mml:mo stretchy="true" form="prefix">|</mml:mo>
+                              <mml:mi>t</mml:mi>
+                              <mml:mo stretchy="true" form="postfix">|</mml:mo>
+                            </mml:mrow>
+                            <mml:mo stretchy="true" form="postfix">]</mml:mo>
+                          </mml:mrow>
+                          <mml:mo>+</mml:mo>
+                          <mml:mi>i</mml:mi>
+                          <mml:mi>δ</mml:mi>
+                          <mml:mi>t</mml:mi>
+                          <mml:mo stretchy="true" form="postfix">}</mml:mo>
+                        </mml:mrow>
+                        <mml:mo>,</mml:mo>
+                      </mml:mtd>
+                      <mml:mtd columnalign="left" style="text-align: left">
+                        <mml:mrow>
+                          <mml:mtext mathvariant="normal">se </mml:mtext>
+                          <mml:mspace width="0.333em"/>
+                        </mml:mrow>
+                        <mml:mi>α</mml:mi>
+                        <mml:mo>=</mml:mo>
+                        <mml:mn>1</mml:mn>
+                      </mml:mtd>
+                    </mml:mtr>
+                  </mml:mtable>
+                </mml:mrow>
+              </mml:mrow>
+            </mml:math>
+          </alternatives>
+        </disp-formula>
+      </p>
+      <p>onde:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\alpha \in (0, 2]]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>∈</mml:mo><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false" form="postfix">]</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
       é o <bold>índice de estabilidade</bold> (ou parâmetro de
       cauda),</p>
-    </list-item>
-    <list-item>
-      <p><inline-formula><alternatives>
-      <tex-math><![CDATA[\beta \in [-1,1]]]></tex-math>
-      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>β</mml:mi><mml:mo>∈</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>−</mml:mi><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\beta \in [-1,1]]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>β</mml:mi><mml:mo>∈</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mo>−</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
       é o parâmetro de <bold>simetria</bold>,</p>
-    </list-item>
-    <list-item>
-      <p><inline-formula><alternatives>
-      <tex-math><![CDATA[\gamma > 0]]></tex-math>
-      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>γ</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\gamma > 0]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>γ</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
       é o <bold>parâmetro de escala</bold>,</p>
-    </list-item>
-    <list-item>
-      <p><inline-formula><alternatives>
-      <tex-math><![CDATA[\delta \in \mathbb{R}]]></tex-math>
-      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>δ</mml:mi><mml:mo>∈</mml:mo><mml:mi>ℝ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\delta \in \mathbb{R}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>δ</mml:mi><mml:mo>∈</mml:mo><mml:mi>ℝ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
       é o <bold>parâmetro de localização</bold>.</p>
-    </list-item>
-  </list>
-  <p>Quando <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha = 2]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
-  obtemos a distribuição normal <inline-formula><alternatives>
-  <tex-math><![CDATA[\mathcal{N}(\delta, 2\gamma^2)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>δ</mml:mi><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:msup><mml:mi>γ</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
-  e quando <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha = 1]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
-  e <inline-formula><alternatives>
-  <tex-math><![CDATA[\beta = 0]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>β</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
-  obtemos a <bold>Cauchy</bold>. Para <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha < 2]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+        </list-item>
+      </list>
+      <p>Quando <inline-formula><alternatives><tex-math><![CDATA[\alpha = 2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+  obtemos a distribuição normal <inline-formula><alternatives><tex-math><![CDATA[\mathcal{N}(\delta, 2\gamma^2)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>δ</mml:mi><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:msup><mml:mi>γ</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+  e quando <inline-formula><alternatives><tex-math><![CDATA[\alpha = 1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+  e <inline-formula><alternatives><tex-math><![CDATA[\beta = 0]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>β</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+  obtemos a <bold>Cauchy</bold>. Para <inline-formula><alternatives><tex-math><![CDATA[\alpha < 2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
   a variância da distribuição é infinita; para
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha < 1]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
+  <inline-formula><alternatives><tex-math><![CDATA[\alpha < 1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>,
   a média também deixa de existir. Essas distribuições, portanto, rompem
   com os pilares do TCL clássico, e exigem um enquadramento assintótico
   mais flexível — o que é oferecido pelo chamado <bold>Teorema Central
   Generalizado</bold>.</p>
-  <p>Esse teorema afirma que, se temos uma sequência de variáveis iid
+      <p>Esse teorema afirma que, se temos uma sequência de variáveis iid
   com caudas pesadas que obedecem a uma <bold>lei de potência</bold> com
-  expoente <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha \in (0,2)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>α</mml:mi><mml:mo>∈</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+  expoente <inline-formula><alternatives><tex-math><![CDATA[\alpha \in (0,2)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>α</mml:mi><mml:mo>∈</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
   então a soma adequadamente normalizada dessa sequência <bold>converge
   em distribuição para uma distribuição estável de parâmetro
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula></bold>,
+  <inline-formula><alternatives><tex-math><![CDATA[\alpha]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula></bold>,
   e não para a normal. Isso mostra que, longe de serem meras
   curiosidades teóricas, as distribuições estáveis são <bold>os
   verdadeiros limites assintóticos de processos dominados por grandes
   flutuações</bold> — e, portanto, mais adequados para modelar fenômenos
   como:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p>retornos financeiros com volatilidade explosiva,</p>
-    </list-item>
-    <list-item>
-      <p>cargas de tráfego em redes de computadores,</p>
-    </list-item>
-    <list-item>
-      <p>tremores de terra,</p>
-    </list-item>
-    <list-item>
-      <p>tempo entre transações de alta frequência,</p>
-    </list-item>
-    <list-item>
-      <p>ou picos de sinais biomédicos.</p>
-    </list-item>
-  </list>
-  <p>Além disso, o parâmetro <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula>
+      <list list-type="bullet">
+        <list-item>
+          <p>retornos financeiros com volatilidade explosiva,</p>
+        </list-item>
+        <list-item>
+          <p>cargas de tráfego em redes de computadores,</p>
+        </list-item>
+        <list-item>
+          <p>tremores de terra,</p>
+        </list-item>
+        <list-item>
+          <p>tempo entre transações de alta frequência,</p>
+        </list-item>
+        <list-item>
+          <p>ou picos de sinais biomédicos.</p>
+        </list-item>
+      </list>
+      <p>Além disso, o parâmetro <inline-formula><alternatives><tex-math><![CDATA[\alpha]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula>
   tem uma interpretação direta: ele governa <bold>a espessura das
   caudas</bold> da distribuição. Quanto menor o valor de
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\alpha]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula>,
+  <inline-formula><alternatives><tex-math><![CDATA[\alpha]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>α</mml:mi></mml:math></alternatives></inline-formula>,
   <bold>mais pesadas</bold> são as caudas, ou seja, maior a
   probabilidade de ocorrência de valores extremos. Essa característica
   está no centro do debate contemporâneo sobre <bold>eventos raros e
   riscos extremos</bold>, em que os modelos gaussianos falham justamente
   por subestimar a frequência e o impacto desses eventos.</p>
-  <p>No entanto, trabalhar com distribuições estáveis traz desafios
+      <p>No entanto, trabalhar com distribuições estáveis traz desafios
   significativos. Como muitas vezes não possuem densidade fechada ou
   momentos finitos, as ferramentas estatísticas convencionais — como
   média, desvio padrão ou testes baseados em momentos — se tornam
@@ -425,7 +523,7 @@ estatísticas em contextos reais dominados por extremos.
   de simulação</bold>, além da integração com técnicas como
   <bold>cópulas</bold> para modelagem da dependência multivariada em
   ambientes de caudas pesadas.</p>
-  <p>Como discutido na seção anterior, Mandelbrot foi um dos primeiros a
+      <p>Como discutido na seção anterior, Mandelbrot foi um dos primeiros a
   identificar esse descompasso entre teoria e prática na modelagem
   estatística, propondo que as distribuições estáveis fossem adotadas
   como nova base de análise para sistemas complexos. Esse paradigma não
@@ -434,11 +532,11 @@ estatísticas em contextos reais dominados por extremos.
   os <bold>modelos multifractais</bold> e as <bold>seções de Lévy</bold>
   — que buscam reconciliar a complexidade das flutuações reais com
   estruturas matemáticas interpretáveis.</p>
-</sec>
-<sec id="multifractalidade-tempo-estocástico-e-o-modelo-mmar">
-  <title>4 3. Multifractalidade, Tempo Estocástico e o Modelo
+    </sec>
+    <sec id="multifractalidade-tempo-estocástico-e-o-modelo-mmar">
+      <title>4 3. Multifractalidade, Tempo Estocástico e o Modelo
   MMAR</title>
-  <p>Conforme vimos, as distribuições estáveis explicam a presença de
+      <p>Conforme vimos, as distribuições estáveis explicam a presença de
   caudas pesadas em sistemas reais e expandem os limites do Teorema
   Central do Limite (TCL). No entanto, elas ainda assumem certa
   homogeneidade estatística — a distribuição permanece a mesma ao longo
@@ -448,85 +546,103 @@ estatísticas em contextos reais dominados por extremos.
   comportamento intermitente e autocorrelacionado em múltiplas escalas é
   característico de um fenômeno chamado
   <bold>multifractalidade</bold>.</p>
-  <p>A multifractalidade estende a ideia de um fractal — um objeto com
+      <p>A multifractalidade estende a ideia de um fractal — um objeto com
   estrutura auto-semelhante — para o domínio estatístico. Em vez de uma
   única lei de escala, como ocorre em fractais monofractais (por
   exemplo, o passeio aleatório padrão), sistemas multifractais exibem
   <bold>uma multiplicidade de leis de escala locais</bold>, cada uma
   associada a um subconjunto do tempo ou do espaço. Essa estrutura é
   quantificada por espectros multifractais, como o espectro de
-  singularidades <inline-formula><alternatives>
-  <tex-math><![CDATA[f(\alpha)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>α</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+  singularidades <inline-formula><alternatives><tex-math><![CDATA[f(\alpha)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>α</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
   que descreve a distribuição das excentricidades locais de
   regularidade.</p>
-  <p>Mandelbrot, Calvet e Fisher propuseram uma modelagem estatística
+      <p>Mandelbrot, Calvet e Fisher propuseram uma modelagem estatística
   que incorpora essa complexidade: o <bold>MMAR (Multifractal Model of
   Asset Returns)</bold>. Nesse modelo, os retornos de um ativo
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[X(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  <inline-formula><alternatives><tex-math><![CDATA[X(t)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
   são representados como um <bold>movimento browniano fracionário
   subordinado</bold> por um <bold>tempo multifractal</bold>
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\theta(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>θ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
+  <inline-formula><alternatives><tex-math><![CDATA[\theta(t)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>θ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>,
   isto é:</p>
-  <p><disp-formula><alternatives>
-  <tex-math><![CDATA[
+      <p>
+        <disp-formula>
+          <alternatives>
+            <tex-math><![CDATA[
   X(t) = B_H(\theta(t)),
   ]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>B</mml:mi><mml:mi>H</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>θ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives></disp-formula></p>
-  <p>onde <inline-formula><alternatives>
-  <tex-math><![CDATA[B_H]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>B</mml:mi><mml:mi>H</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+            <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+              <mml:mrow>
+                <mml:mi>X</mml:mi>
+                <mml:mrow>
+                  <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                  <mml:mi>t</mml:mi>
+                  <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                </mml:mrow>
+                <mml:mo>=</mml:mo>
+                <mml:msub>
+                  <mml:mi>B</mml:mi>
+                  <mml:mi>H</mml:mi>
+                </mml:msub>
+                <mml:mrow>
+                  <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                  <mml:mi>θ</mml:mi>
+                  <mml:mrow>
+                    <mml:mo stretchy="true" form="prefix">(</mml:mo>
+                    <mml:mi>t</mml:mi>
+                    <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                  </mml:mrow>
+                  <mml:mo stretchy="true" form="postfix">)</mml:mo>
+                </mml:mrow>
+                <mml:mo>,</mml:mo>
+              </mml:mrow>
+            </mml:math>
+          </alternatives>
+        </disp-formula>
+      </p>
+      <p>onde <inline-formula><alternatives><tex-math><![CDATA[B_H]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>B</mml:mi><mml:mi>H</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
   é um movimento browniano com dependência temporal (via parâmetro de
-  Hurst <inline-formula><alternatives>
-  <tex-math><![CDATA[H]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>H</mml:mi></mml:math></alternatives></inline-formula>),
-  e <inline-formula><alternatives>
-  <tex-math><![CDATA[\theta(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>θ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  Hurst <inline-formula><alternatives><tex-math><![CDATA[H]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>H</mml:mi></mml:math></alternatives></inline-formula>),
+  e <inline-formula><alternatives><tex-math><![CDATA[\theta(t)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>θ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
   é uma função de tempo estocástico construída a partir de cascatas
   multiplicativas. Essa subordinação permite que a variabilidade da
   série seja não apenas aleatória, mas também <bold>multiescala</bold> —
   capturando a alternância entre calmaria e explosão de
   volatilidade.</p>
-  <p>Embora o MMAR tenha sido originalmente desenvolvido para séries
+      <p>Embora o MMAR tenha sido originalmente desenvolvido para séries
   financeiras, suas ideias têm aplicações muito mais amplas. Fenômenos
   com <bold>estrutura intermitente e multiescala</bold> aparecem em
   várias áreas:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Hidrologia</bold>: séries de vazão de rios e chuvas
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Hidrologia</bold>: séries de vazão de rios e chuvas
       apresentam picos abruptos alternando com longos períodos de
       estabilidade. A multifractalidade ajuda a modelar a distribuição
       de eventos extremos e a variabilidade em diferentes escalas
       temporais.</p>
-    </list-item>
-    <list-item>
-      <p><bold>Tráfego de internet e telecomunicações</bold>: o fluxo de
+        </list-item>
+        <list-item>
+          <p><bold>Tráfego de internet e telecomunicações</bold>: o fluxo de
       pacotes em redes digitais mostra comportamento “burst-like”, com
       rajadas de atividade intensas separadas por períodos de baixa
       demanda. Modelos multifractais foram aplicados para simular e
       prever congestionamentos de rede.</p>
-    </list-item>
-    <list-item>
-      <p><bold>Geofísica e sismologia</bold>: a liberação de energia em
+        </list-item>
+        <list-item>
+          <p><bold>Geofísica e sismologia</bold>: a liberação de energia em
       terremotos ocorre em padrões multifractais, com tremores menores
       acumulando tensão e eventos catastróficos concentrando energia em
       pontos singulares da crosta.</p>
-    </list-item>
-    <list-item>
-      <p><bold>Fisiologia</bold>: séries de intervalos RR (batimentos
+        </list-item>
+        <list-item>
+          <p><bold>Fisiologia</bold>: séries de intervalos RR (batimentos
       cardíacos) ou de variação da frequência respiratória apresentam
       flutuações intermitentes de diferentes intensidades. O estudo
       multifractal tem sido útil para entender a complexidade do
       controle autonômico e diferenças entre estados patológicos e
       saudáveis.</p>
-    </list-item>
-  </list>
-  <p>A chave conceitual do MMAR é a introdução de um <bold>tempo
+        </list-item>
+      </list>
+      <p>A chave conceitual do MMAR é a introdução de um <bold>tempo
   multifractal</bold>, que deforma o tempo cronológico e o substitui por
   uma métrica irregular, onde o tempo “passa mais rápido” em regiões
   turbulentas e “mais devagar” em regiões calmas. Essa deformação
@@ -535,7 +651,7 @@ estatísticas em contextos reais dominados por extremos.
   heterogeneidade estatística local. Ambas as abordagens têm em comum a
   noção de que <bold>não é suficiente observar a soma dos dados: é
   necessário respeitar sua geometria estatística interna.</bold></p>
-  <p>Em termos práticos, o MMAR fornece uma estrutura que
+      <p>Em termos práticos, o MMAR fornece uma estrutura que
   <bold>generaliza o TCL dentro de um universo multifractal</bold>: ao
   invés de supor variabilidade homogênea e usar a média como estatística
   central, ele admite uma multiplicidade de escalas, cada uma
@@ -543,11 +659,11 @@ estatísticas em contextos reais dominados por extremos.
   caminho para novos métodos de previsão, avaliação de risco e análise
   estatística robusta, tanto em finanças quanto em sistemas naturais e
   tecnológicos.</p>
-</sec>
-<sec id="seções-de-lévy-uma-releitura-do-tcl-em-ambientes-hostis">
-  <title>5 4. Seções de Lévy — Uma Releitura do TCL em Ambientes
+    </sec>
+    <sec id="seções-de-lévy-uma-releitura-do-tcl-em-ambientes-hostis">
+      <title>5 4. Seções de Lévy — Uma Releitura do TCL em Ambientes
   Hostis</title>
-  <p>O Teorema Central do Limite tradicional presume que cada termo da
+      <p>O Teorema Central do Limite tradicional presume que cada termo da
   soma contribui de maneira “regular” para o todo: as variáveis são iid
   (ou, no máximo, obedecem a condições como as de Lyapunov ou Lindeberg)
   e, portanto, a agregação preserva simetria, variância finita e
@@ -555,34 +671,26 @@ estatísticas em contextos reais dominados por extremos.
   diante de <bold>séries com heterogeneidade intensa</bold>, nas quais
   alguns termos possuem variâncias significativamente maiores que outros
   — ou flutuações intermitentes e imprevisíveis ao longo do tempo.</p>
-  <p>Para lidar com essas situações, Figueiredo, Gleria, Matsushita e
+      <p>Para lidar com essas situações, Figueiredo, Gleria, Matsushita e
   colaboradores (2004–2022) propuseram um instrumento conceitual e
   computacional elegante: o <bold>teorema das seções de Lévy</bold>. Em
-  vez de considerar a série <inline-formula><alternatives>
-  <tex-math><![CDATA[X_1, X_2, \dots, X_n]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>
+  vez de considerar a série <inline-formula><alternatives><tex-math><![CDATA[X_1, X_2, \dots, X_n]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>…</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>
   como uma sequência rígida e arbitrária de observações, os autores
   propõem <bold>reordená-la segundo a variância acumulada</bold>: a cada
   passo, adiciona-se à soma o termo que mais contribui para a
   variabilidade total, medindo-a localmente. O resultado é uma nova
   série ordenada por impacto estatístico — as chamadas <bold>seções de
   Lévy</bold>.</p>
-  <p>Formalmente, dada uma sequência de termos
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[\{X_i\}_{i=1}^n]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msubsup><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula>,
+      <p>Formalmente, dada uma sequência de termos
+  <inline-formula><alternatives><tex-math><![CDATA[\{X_i\}_{i=1}^n]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msubsup><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula>,
   constroem-se subsequências de somas parciais
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[S_k = \sum_{i=1}^k X_{\pi(i)}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>k</mml:mi></mml:msubsup><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>π</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>i</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
-  onde <inline-formula><alternatives>
-  <tex-math><![CDATA[\pi]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>π</mml:mi></mml:math></alternatives></inline-formula>
+  <inline-formula><alternatives><tex-math><![CDATA[S_k = \sum_{i=1}^k X_{\pi(i)}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>k</mml:mi></mml:msubsup><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>π</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>i</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+  onde <inline-formula><alternatives><tex-math><![CDATA[\pi]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>π</mml:mi></mml:math></alternatives></inline-formula>
   é uma permutação que organiza os termos de acordo com seu peso na
   variância cumulativa. Essa construção remete à ideia de <bold>“filtrar
   a essência da soma”</bold> — privilegiando os termos que mais afetam a
   dispersão total do sistema.</p>
-  <p>A genialidade dessa abordagem está no fato de que ela <bold>não é
+      <p>A genialidade dessa abordagem está no fato de que ela <bold>não é
   puramente técnica ou algorítmica</bold>: é uma <bold>releitura
   filosófica do TCL</bold>. Em vez de assumir que toda soma tende à
   normalidade (ou à estabilidade), ela pergunta: <bold>quais são os
@@ -593,29 +701,29 @@ estatísticas em contextos reais dominados por extremos.
   irrelevante</bold>, pois está dominada por poucos termos extremos. As
   seções de Lévy recuperam esse domínio estrutural e o incorporam na
   análise.</p>
-  <p>Os autores demonstram que, ao aplicar essa ordenação, a soma
+      <p>Os autores demonstram que, ao aplicar essa ordenação, a soma
   parcial resultante apresenta propriedades mais estáveis e
   informativas. Em particular, quando comparadas com as somas
   cronológicas ou parciais convencionais, as somas de Lévy exibem:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p>convergência mais rápida,</p>
-    </list-item>
-    <list-item>
-      <p>menor erro quadrático médio,</p>
-    </list-item>
-    <list-item>
-      <p>maior robustez em amostras pequenas,</p>
-    </list-item>
-    <list-item>
-      <p>e uma aproximação mais fiel do comportamento real da série.</p>
-    </list-item>
-  </list>
-  <p>Além disso, as seções de Lévy permitem <bold>comparar séries de
+      <list list-type="bullet">
+        <list-item>
+          <p>convergência mais rápida,</p>
+        </list-item>
+        <list-item>
+          <p>menor erro quadrático médio,</p>
+        </list-item>
+        <list-item>
+          <p>maior robustez em amostras pequenas,</p>
+        </list-item>
+        <list-item>
+          <p>e uma aproximação mais fiel do comportamento real da série.</p>
+        </list-item>
+      </list>
+      <p>Além disso, as seções de Lévy permitem <bold>comparar séries de
   natureza diferente</bold> em uma base comum, pois revelam a estrutura
   subjacente de variabilidade — o que é particularmente útil em análise
   de séries heteroscedásticas.</p>
-  <p>Essa abordagem também serve como uma ponte natural para modelos
+      <p>Essa abordagem também serve como uma ponte natural para modelos
   multifractais, pois ambos compartilham a ideia de que <bold>a
   importância estatística de um evento não está apenas em seu valor, mas
   na escala em que ele ocorre</bold>. As seções de Lévy podem ser
@@ -623,7 +731,7 @@ estatísticas em contextos reais dominados por extremos.
   métrica temporal, similar à deformação do tempo no modelo MMAR — só
   que agora construída a partir da própria estrutura empírica da
   variância.</p>
-  <p>Mais do que uma técnica alternativa, as seções de Lévy propõem uma
+      <p>Mais do que uma técnica alternativa, as seções de Lévy propõem uma
   <bold>redefinição do processo de agregação estatística</bold>,
   desafiando a hegemonia da média aritmética e oferecendo um novo ponto
   de entrada para o estudo de sistemas complexos. Essa proposta se
@@ -631,11 +739,11 @@ estatísticas em contextos reais dominados por extremos.
   normalidade aos dados, devemos <bold>rever os próprios fundamentos da
   soma</bold>, reconhecendo que, em ambientes hostis e multifacetados,
   <bold>o todo é governado por poucos, mas intensos</bold>.</p>
-</sec>
-<sec id="comparações-empíricas-quando-a-média-não-é-o-centro">
-  <title>6 5. Comparações Empíricas — Quando a Média Não é o
+    </sec>
+    <sec id="comparações-empíricas-quando-a-média-não-é-o-centro">
+      <title>6 5. Comparações Empíricas — Quando a Média Não é o
   Centro</title>
-  <p>A intuição por trás das seções de Lévy — dar prioridade estatística
+      <p>A intuição por trás das seções de Lévy — dar prioridade estatística
   aos termos que mais contribuem para a variância — ganha força quando
   testada em dados reais. Nos trabalhos de Figueiredo, Castro, Fonseca,
   Matsushita e outros (2004–2022), essa técnica é aplicada a diferentes
@@ -643,17 +751,11 @@ estatísticas em contextos reais dominados por extremos.
   tradicional pode ocultar a estrutura essencial da
   variabilidade</bold>, enquanto a abordagem via seções de Lévy a
   revela.</p>
-  <p>Um dos primeiros experimentos apresentados (Figueiredo et al.,
+      <p>Um dos primeiros experimentos apresentados (Figueiredo et al.,
   2004) envolve séries simuladas com heterocedasticidade controlada. A
-  partir de processos do tipo <inline-formula><alternatives>
-  <tex-math><![CDATA[X_t = Z_t \cdot \sigma_t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>Z</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>⋅</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
-  onde <inline-formula><alternatives>
-  <tex-math><![CDATA[Z_t \sim N(0,1)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>Z</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>∼</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
-  e <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma_t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>σ</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+  partir de processos do tipo <inline-formula><alternatives><tex-math><![CDATA[X_t = Z_t \cdot \sigma_t]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>Z</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>⋅</mml:mo><mml:msub><mml:mi>σ</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+  onde <inline-formula><alternatives><tex-math><![CDATA[Z_t \sim N(0,1)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mi>Z</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>∼</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  e <inline-formula><alternatives><tex-math><![CDATA[\sigma_t]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>σ</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
   segue uma lei de potência ou uma sequência binária alternante (como em
   uma cascata multifractal), os autores mostram que a média aritmética e
   a soma parcial tradicional <bold>não capturam adequadamente os regimes
@@ -661,53 +763,53 @@ estatísticas em contextos reais dominados por extremos.
   uma curva suavizada que preserva a ordem de grandeza da variabilidade
   dominante — como se “limassem o ruído” e mantivessem o esqueleto
   estatístico da série.</p>
-  <p>Esse fenômeno aparece com ainda mais força quando se trabalha com
+      <p>Esse fenômeno aparece com ainda mais força quando se trabalha com
   <bold>séries financeiras reais</bold>, como os retornos do Ibovespa ou
   taxas de câmbio (Figueiredo et al., 2007, 2022). Ao aplicar as seções
   de Lévy, observou-se que:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p>os picos de volatilidade tornam-se evidentes e organizados,</p>
-    </list-item>
-    <list-item>
-      <p>a média aritmética, muitas vezes nula ou enganosa, é
+      <list list-type="bullet">
+        <list-item>
+          <p>os picos de volatilidade tornam-se evidentes e organizados,</p>
+        </list-item>
+        <list-item>
+          <p>a média aritmética, muitas vezes nula ou enganosa, é
       substituída por um perfil cumulativo que <bold>dá peso ao que
       realmente importa</bold> (os retornos extremos),</p>
-    </list-item>
-    <list-item>
-      <p>as métricas de erro — como o erro quadrático médio (RMSE) —
+        </list-item>
+        <list-item>
+          <p>as métricas de erro — como o erro quadrático médio (RMSE) —
       <bold>são significativamente menores</bold> nas previsões com base
       em somas de Lévy do que com as tradicionais.</p>
-    </list-item>
-  </list>
-  <p>Em termos visuais, a diferença é marcante: enquanto a média
+        </list-item>
+      </list>
+      <p>Em termos visuais, a diferença é marcante: enquanto a média
   cronológica se espalha com ruído, a média baseada nas seções de Lévy
   <bold>revela uma estrutura “esquelética” de flutuações
   dominantes</bold>, oferecendo uma espécie de extrato estatístico da
   série.</p>
-  <p>Os autores ainda exploram aplicações em <bold>dados
+      <p>Os autores ainda exploram aplicações em <bold>dados
   ambientais</bold>, como séries de temperatura e precipitação,
   mostrando que as seções de Lévy capturam melhor os eventos extremos e
   sazonais do que os modelos aditivos convencionais. Essa observação
   abre caminho para o uso da técnica em contextos como:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p>previsão de cheias e secas (hidrologia),</p>
-    </list-item>
-    <list-item>
-      <p>detecção de falhas intermitentes em equipamentos
+      <list list-type="bullet">
+        <list-item>
+          <p>previsão de cheias e secas (hidrologia),</p>
+        </list-item>
+        <list-item>
+          <p>detecção de falhas intermitentes em equipamentos
       (engenharia),</p>
-    </list-item>
-    <list-item>
-      <p>caracterização de padrões de sono e batimentos cardíacos com
+        </list-item>
+        <list-item>
+          <p>caracterização de padrões de sono e batimentos cardíacos com
       instabilidade (fisiologia),</p>
-    </list-item>
-    <list-item>
-      <p>e monitoramento de eventos extremos em sistemas ecológicos ou
+        </list-item>
+        <list-item>
+          <p>e monitoramento de eventos extremos em sistemas ecológicos ou
       epidemiológicos.</p>
-    </list-item>
-  </list>
-  <p>Outro aspecto relevante é que o método das seções de Lévy <bold>não
+        </list-item>
+      </list>
+      <p>Outro aspecto relevante é que o método das seções de Lévy <bold>não
   depende de um modelo paramétrico pré-definido</bold>, o que o torna
   atraente para aplicações com dados pouco estruturados ou com incerteza
   sobre a forma da distribuição. Em ambientes onde a distribuição pode
@@ -715,20 +817,20 @@ estatísticas em contextos reais dominados por extremos.
   instáveis (como no regime das distribuições estáveis), as seções de
   Lévy funcionam como uma estratégia adaptativa e robusta de
   agregação.</p>
-  <p>Por fim, os experimentos computacionais realizados pelos autores
+      <p>Por fim, os experimentos computacionais realizados pelos autores
   indicam que, mesmo com amostras pequenas ou moderadas, as seções de
   Lévy fornecem estimativas mais robustas, sugerindo que a técnica pode
   ser útil <bold>em situações com poucos dados — justamente onde os
   modelos tradicionais são mais frágeis</bold>.</p>
-  <p>Esses achados reforçam a ideia de que, em sistemas intermitentes,
+      <p>Esses achados reforçam a ideia de que, em sistemas intermitentes,
   heterogêneos ou dominados por caudas pesadas, <bold>a média aritmética
   perde seu protagonismo estatístico</bold>, e técnicas como as seções
   de Lévy, ao priorizarem a variância acumulada, assumem o papel de
   desvelar o que os dados efetivamente nos dizem.</p>
-</sec>
-<sec id="implicações-para-teoria-e-prática-estatística">
-  <title>7 6. Implicações para Teoria e Prática Estatística</title>
-  <p>Ao longo das últimas seções, vimos emergir um panorama em que os
+    </sec>
+    <sec id="implicações-para-teoria-e-prática-estatística">
+      <title>7 6. Implicações para Teoria e Prática Estatística</title>
+      <p>Ao longo das últimas seções, vimos emergir um panorama em que os
   pilares clássicos da estatística — como o Teorema Central do Limite
   (TCL), a média aritmética e a suposição de variância finita — revelam
   suas limitações diante de sistemas complexos e intermitentes. Esse
@@ -737,130 +839,130 @@ estatísticas em contextos reais dominados por extremos.
   técnico</bold>. As distribuições estáveis, os modelos multifractais e
   as seções de Lévy propõem exatamente isso: <bold>uma nova gramática
   estatística para um mundo em que o caos é a norma</bold>.</p>
-  <sec id="generalizações-do-teorema-central-do-limite">
-    <title>7.1 6.1 Generalizações do Teorema Central do Limite</title>
-    <p>O Teorema Central do Limite clássico pressupõe condições como
+      <sec id="generalizações-do-teorema-central-do-limite">
+        <title>7.1 6.1 Generalizações do Teorema Central do Limite</title>
+        <p>O Teorema Central do Limite clássico pressupõe condições como
     independência, variância finita e contribuição regular dos termos da
     soma. Em contextos reais — especialmente em séries financeiras,
     ambientais, fisiológicas e geofísicas — essas condições raramente
     são plenamente atendidas. Modelos de cauda pesada violam a finitude
     da variância, e estruturas intermitentes quebram a homogeneidade
     temporal.</p>
-    <p>Para dar conta desses casos, surgem generalizações como:</p>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>O TCL para distribuições α-estáveis</bold>, em que a
+        <p>Para dar conta desses casos, surgem generalizações como:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>O TCL para distribuições α-estáveis</bold>, em que a
         normalidade é substituída por distribuições como Cauchy ou
         Lévy.</p>
-      </list-item>
-      <list-item>
-        <p><bold>A condição de Lyapunov</bold>, que permite alguma
+          </list-item>
+          <list-item>
+            <p><bold>A condição de Lyapunov</bold>, que permite alguma
         heterogeneidade, desde que a contribuição dos termos com
         variância elevada diminua suficientemente rápido.</p>
-      </list-item>
-      <list-item>
-        <p><bold>A condição de Lindeberg</bold>, mais fraca, mas ainda
+          </list-item>
+          <list-item>
+            <p><bold>A condição de Lindeberg</bold>, mais fraca, mas ainda
         exigente quando há flutuações dominadas por poucos eventos
         extremos.</p>
-      </list-item>
-      <list-item>
-        <p>E, finalmente, as <bold>seções de Lévy</bold>, que propõem
+          </list-item>
+          <list-item>
+            <p>E, finalmente, as <bold>seções de Lévy</bold>, que propõem
         uma reordenação adaptativa da soma — abrindo mão da cronologia
         em favor da significância estatística.</p>
-      </list-item>
-    </list>
-    <p>Essas generalizações, cada uma a seu modo, <bold>relaxam a
+          </list-item>
+        </list>
+        <p>Essas generalizações, cada uma a seu modo, <bold>relaxam a
     rigidez do TCL clássico</bold>, permitindo que convergências ocorrem
     sob formas mais diversas e realistas.</p>
-  </sec>
-  <sec id="cópulas-e-dependência-multivariada">
-    <title>7.2 6.2 Cópulas e Dependência Multivariada</title>
-    <p>Outro ponto central diz respeito à modelagem de dependência. Em
+      </sec>
+      <sec id="cópulas-e-dependência-multivariada">
+        <title>7.2 6.2 Cópulas e Dependência Multivariada</title>
+        <p>Outro ponto central diz respeito à modelagem de dependência. Em
     sistemas com caudas pesadas e intermitência, a dependência não é
     apenas linear ou de primeira ordem — ela pode ser assimétrica,
     localizada em regiões de extremos, e manifestar-se em múltiplas
     escalas temporais. Cópulas fornecem um instrumento poderoso para
     separar <bold>a estrutura de dependência da forma marginal das
     distribuições</bold>.</p>
-    <p>Em contextos multifractais ou com seções de Lévy, cópulas podem
+        <p>Em contextos multifractais ou com seções de Lévy, cópulas podem
     ser usadas para modelar:</p>
-    <list list-type="bullet">
-      <list-item>
-        <p>a coocorrência de picos em diferentes séries (como
+        <list list-type="bullet">
+          <list-item>
+            <p>a coocorrência de picos em diferentes séries (como
         precipitação e vazão),</p>
-      </list-item>
-      <list-item>
-        <p>a sincronização entre ativos com regimes de volatilidade
+          </list-item>
+          <list-item>
+            <p>a sincronização entre ativos com regimes de volatilidade
         acoplados,</p>
-      </list-item>
-      <list-item>
-        <p>ou a propagação de riscos em sistemas interconectados.</p>
-      </list-item>
-    </list>
-    <p>Mais ainda, em distribuições α-estáveis multivariadas, a
+          </list-item>
+          <list-item>
+            <p>ou a propagação de riscos em sistemas interconectados.</p>
+          </list-item>
+        </list>
+        <p>Mais ainda, em distribuições α-estáveis multivariadas, a
     dependência entre componentes não se expressa via covariância, mas
     por estruturas angulares ou espectrais — o que exige cópulas
     especializadas, como as <bold>cópulas t</bold> ou cópulas baseadas
     em séries de Lévy.</p>
-  </sec>
-  <sec id="estatística-além-da-média">
-    <title>7.3 6.3 Estatística além da Média</title>
-    <p>Uma das mensagens mais fortes que emergem desta discussão é que
+      </sec>
+      <sec id="estatística-além-da-média">
+        <title>7.3 6.3 Estatística além da Média</title>
+        <p>Uma das mensagens mais fortes que emergem desta discussão é que
     <bold>a média pode não ser o centro estatístico de sistemas
     complexos</bold>. Ela pode existir formalmente, mas ser irrelevante
     do ponto de vista informacional — especialmente em séries com
     flutuações de grande amplitude e caudas densas.</p>
-    <p>Técnicas como:</p>
-    <list list-type="bullet">
-      <list-item>
-        <p>o uso de <bold>quantis</bold>,</p>
-      </list-item>
-      <list-item>
-        <p>o foco em <bold>funções características</bold> em vez de
+        <p>Técnicas como:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>o uso de <bold>quantis</bold>,</p>
+          </list-item>
+          <list-item>
+            <p>o foco em <bold>funções características</bold> em vez de
         momentos,</p>
-      </list-item>
-      <list-item>
-        <p>estimativas robustas,</p>
-      </list-item>
-      <list-item>
-        <p>e especialmente <bold>reordenações por variância
+          </list-item>
+          <list-item>
+            <p>estimativas robustas,</p>
+          </list-item>
+          <list-item>
+            <p>e especialmente <bold>reordenações por variância
         acumulada</bold>, como nas seções de Lévy,</p>
-      </list-item>
-    </list>
-    <p>surgem como alternativas metodológicas para capturar o que
+          </list-item>
+        </list>
+        <p>surgem como alternativas metodológicas para capturar o que
     realmente governa os dados.</p>
-    <p>Essa mudança de perspectiva implica uma reformulação
+        <p>Essa mudança de perspectiva implica uma reformulação
     epistemológica: <bold>em vez de perguntar “qual é a média?”</bold>,
     passamos a perguntar <bold>“quais são os termos que moldam o
     comportamento da soma?”</bold>.</p>
-  </sec>
-  <sec id="riscos-extremos-e-fragilidade-estatística">
-    <title>7.4 6.4 Riscos Extremos e Fragilidade Estatística</title>
-    <p>Como destacado por Taleb (2007), eventos de cauda — aqueles que
+      </sec>
+      <sec id="riscos-extremos-e-fragilidade-estatística">
+        <title>7.4 6.4 Riscos Extremos e Fragilidade Estatística</title>
+        <p>Como destacado por Taleb (2007), eventos de cauda — aqueles que
     ocorrem raramente, mas têm alto impacto — são subestimados por
     modelos gaussianos. As ferramentas discutidas aqui fornecem
     <bold>antídotos conceituais contra essa fragilidade</bold>:</p>
-    <list list-type="bullet">
-      <list-item>
-        <p>distribuições estáveis acomodam tais eventos
+        <list list-type="bullet">
+          <list-item>
+            <p>distribuições estáveis acomodam tais eventos
         naturalmente;</p>
-      </list-item>
-      <list-item>
-        <p>modelos multifractais os integram como parte da
+          </list-item>
+          <list-item>
+            <p>modelos multifractais os integram como parte da
         estrutura;</p>
-      </list-item>
-      <list-item>
-        <p>seções de Lévy os destacam na própria construção da soma.</p>
-      </list-item>
-    </list>
-    <p>Mais do que isso: essas abordagens não apenas modelam os extremos
+          </list-item>
+          <list-item>
+            <p>seções de Lévy os destacam na própria construção da soma.</p>
+          </list-item>
+        </list>
+        <p>Mais do que isso: essas abordagens não apenas modelam os extremos
     — elas <bold>os reconhecem como centrais</bold>, não periféricos, na
     dinâmica dos sistemas.</p>
-  </sec>
-</sec>
-<sec id="conclusão">
-  <title>8 Conclusão</title>
-  <p>Ao longo deste trabalho, revisitamos o Teorema Central do Limite
+      </sec>
+    </sec>
+    <sec id="conclusão">
+      <title>8 Conclusão</title>
+      <p>Ao longo deste trabalho, revisitamos o Teorema Central do Limite
   não apenas como um resultado técnico da estatística matemática, mas
   como uma <bold>narrativa epistemológica sobre o comportamento coletivo
   de sistemas complexos</bold>. Esse ponto de partida nos levou a
@@ -868,69 +970,65 @@ estatísticas em contextos reais dominados por extremos.
   que, em muitos contextos reais, os pressupostos clássicos — como
   independência, variância finita e homogeneidade — falham de modo
   sistemático.</p>
-  <p>Distribuições α-estáveis, cópulas, modelos multifractais e, em
+      <p>Distribuições α-estáveis, cópulas, modelos multifractais e, em
   especial, as <bold>seções de Lévy</bold> surgem como ferramentas
   conceituais e técnicas que <bold>reconstroem a agregação estatística
   em ambientes hostis</bold>, onde a média não representa o centro, e os
   eventos extremos não são ruído, mas estrutura.</p>
-  <p>As seções de Lévy se destacam por sua simplicidade e potência: ao
+      <p>As seções de Lévy se destacam por sua simplicidade e potência: ao
   reordenar as observações segundo variância acumulada, elas tornam
   visível a arquitetura interna da variabilidade de uma série. Em lugar
   da média cronológica, temos um <bold>esqueleto estatístico revelado
   pelas flutuações dominantes</bold>, que preserva a coerência da
   informação mesmo em contextos intermitentes ou multifractais.</p>
-  <p>Essa abordagem ressoa com propostas como o modelo MMAR de
+      <p>Essa abordagem ressoa com propostas como o modelo MMAR de
   Mandelbrot, Calvet e Fisher, em que o tempo é deformado por cascatas
   multiplicativas. Em ambos os casos, abandona-se a ideia de uma
   cronologia regular e homogênea para adotar uma <bold>métrica
   adaptativa, construída a partir do próprio comportamento empírico dos
   dados</bold>.</p>
-  <p>Mais do que alternativas técnicas, essas ideias representam
+      <p>Mais do que alternativas técnicas, essas ideias representam
   <bold>um deslocamento de paradigma estatístico</bold>: da centralidade
   da média para a estrutura das caudas; da homogeneidade para a
   multiescala; do ruído para a intermitência; da soma cronológica para a
   soma por importância. Trata-se de <bold>uma estatística centrada na
   complexidade</bold>, e não na simplificação.</p>
-  <p>Do ponto de vista prático, as implicações são amplas. Em finanças,
+      <p>Do ponto de vista prático, as implicações são amplas. Em finanças,
   elas tocam o cerne da avaliação de risco e da previsão de
   volatilidade. Em séries ambientais, abrem caminho para análise robusta
   de eventos extremos. Em fisiologia, ajudam a distinguir padrões
   saudáveis de disfunções por meio da variabilidade multiescala. Em
   engenharia de dados, oferecem critérios alternativos para ordenação,
   agregação e compressão de sinais.</p>
-  <p>Para a pesquisa futura, algumas trilhas promissoras incluem:</p>
-  <list list-type="bullet">
-    <list-item>
-      <p>a integração entre seções de Lévy e técnicas de aprendizado de
+      <p>Para a pesquisa futura, algumas trilhas promissoras incluem:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>a integração entre seções de Lévy e técnicas de aprendizado de
       máquina,</p>
-    </list-item>
-    <list-item>
-      <p>o uso de cópulas multifractais para modelar dependência em
+        </list-item>
+        <list-item>
+          <p>o uso de cópulas multifractais para modelar dependência em
       regimes extremos,</p>
-    </list-item>
-    <list-item>
-      <p>a reformulação de testes estatísticos clássicos à luz dessas
+        </list-item>
+        <list-item>
+          <p>a reformulação de testes estatísticos clássicos à luz dessas
       estruturas (por exemplo, testes de média ou homogeneidade com
       seções de Lévy),</p>
-    </list-item>
-    <list-item>
-      <p>e o estudo da relação entre tempo multifractal e medidas de
+        </list-item>
+        <list-item>
+          <p>e o estudo da relação entre tempo multifractal e medidas de
       entropia adaptativa.</p>
-    </list-item>
-  </list>
-  <p>Por fim, a lição mais profunda talvez seja epistemológica:
+        </list-item>
+      </list>
+      <p>Por fim, a lição mais profunda talvez seja epistemológica:
   <bold>entender a estatística não como um conjunto fixo de ferramentas,
   mas como uma linguagem em evolução</bold>, que se adapta aos sistemas
   que busca compreender. Em tempos de complexidade crescente, essa
   linguagem precisa ser, ela mesma, complexa — e isso inclui reconhecer
   que a normalidade é uma exceção elegante, mas nem sempre a regra do
   mundo.</p>
-</sec>
-</body>
-
-<back>
+    </sec>
+  </body>
+  <back>
 </back>
-
-
-
 </article>
