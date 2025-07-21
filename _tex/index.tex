@@ -4,7 +4,9 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-]{agujournal2019}
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -109,11 +111,7 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\usepackage{url} %this package should fix any errors with URLs in refs.
-\usepackage{lineno}
-\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
-\usepackage{soul}
-\linenumbers
+\KOMAoption{captions}{tableheading}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -184,17 +182,19 @@ Levy},
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-
-\draftfalse
+\title{Uma conversa filosófica sobre seções de Levy}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Generalizações do TLC}
+\author{Carolina Musso}
+\date{2025-07-21}
 
 \begin{document}
-\title{Uma conversa filosófica sobre seções de Levy}
-
-\authors{Carolina Musso\affil{1}}
-\affiliation{1}{Universidade de Brasília, }
-\correspondingauthor{Carolina Musso}{cmusso86@gmail.com}
-
-
+\maketitle
 \begin{abstract}
 Este trabalho revisita o Teorema Central do Limite (TCL) sob a ótica da
 complexidade, explorando suas generalizações em contextos de
@@ -213,9 +213,6 @@ com implicações epistemológicas e sugestões para futuras pesquisas
 estatísticas em contextos reais dominados por extremos.
 \end{abstract}
 
-
-
-
 \section{Introdução}\label{introduuxe7uxe3o}
 
 Séries temporais financeiras frequentemente apresentam propriedades
@@ -226,7 +223,7 @@ aplicação direta de métodos baseados em somas de variáveis independentes
 e identicamente distribuídas. Para lidar com esse cenário, foi proposto
 o uso do teorema das seções de Lévy, uma generalização do TCL que busca
 restaurar a gaussianidade mesmo quando os dados apresentam forte
-dependência temporal e variância local variável (Figueiredo et al.,
+dependência temporal e variância local variável (Figueiredo et al.
 2004).
 
 O conceito de seções de Lévy surge como uma construção teórica na qual
@@ -302,7 +299,7 @@ de escala. A escolha entre um regime ou outro não é apenas técnica, mas
 epistemológica: trata-se de como representamos a incerteza no mundo.
 Essa visão ganha contornos mais filosóficos em autores como Nassim
 Taleb, para quem o foco nos modelos gaussianos ignora as ``caudas'' onde
-vivem os riscos mais catastróficos (Taleb, 2007).
+vivem os riscos mais catastróficos (Taleb 2007).
 
 Nesse contexto, os modelos multifractais e as seções de Lévy surgem como
 tentativas modernas de reconectar as ferramentas clássicas da
@@ -339,7 +336,7 @@ Foi Benoît Mandelbrot quem, nas décadas de 1960 e 1990, propôs uma
 reavaliação dessa centralidade da normal. Em seus trabalhos sobre preços
 especulativos e, mais tarde, em \emph{Fractals and Scaling in Finance},
 ele argumentou que a normalidade não é o único ponto de atração
-estatístico possível (Benoît B. Mandelbrot, 1997). Há uma família mais
+estatístico possível (Benoît B. Mandelbrot 1997). Há uma família mais
 ampla de distribuições estáveis, as chamadas α-estáveis, que permanecem
 invariantes sob soma, mesmo com variâncias infinitas. A normal é um caso
 particular com \(\alpha = 2\); para \(\alpha < 2\), emergem
@@ -375,7 +372,7 @@ O uso de cópulas em combinação com distribuições estáveis ou
 multifractais permite capturar não apenas o comportamento marginal, mas
 também a geometria da dependência multivariada, algo que modelos
 baseados em correlação linear não conseguem fazer. Essa abordagem se
-alinha às críticas feitas por autores como Nassim Taleb (Taleb, 2007),
+alinha às críticas feitas por autores como Nassim Taleb (Taleb 2007),
 para quem o verdadeiro risco está nas zonas negligenciadas pelas
 aproximações gaussianas. Em O Cisne Negro, Taleb argumenta que o mundo
 real é dominado por eventos raros de alto impacto, que escapam à
@@ -385,11 +382,11 @@ topografia real do risco.
 Reconhecer essa coexistência de regimes estatísticos, normal e estável,
 e o papel da dependência estrutural e da heterogeneidade dos momentos, é
 essencial para avançar na modelagem de sistemas complexos. Ferramentas
-como os modelos multifractais (Calvet \& Fisher, 2001), as seções de
-Lévy (Figueiredo et al., 2004), e as cópulas para dependência extrema
-não apenas ampliam o escopo do TCL, mas oferecem uma releitura mais
-realista da variabilidade do mundo, capaz de capturar tanto o ordinário
-quanto o extraordinário.
+como os modelos multifractais (Calvet e Fisher 2001), as seções de Lévy
+(Figueiredo et al. 2004), e as cópulas para dependência extrema não
+apenas ampliam o escopo do TCL, mas oferecem uma releitura mais realista
+da variabilidade do mundo, capaz de capturar tanto o ordinário quanto o
+extraordinário.
 
 \section{Distribuições Estáveis e o Mundo das Caudas
 Pesadas}\label{distribuiuxe7uxf5es-estuxe1veis-e-o-mundo-das-caudas-pesadas}
@@ -504,9 +501,10 @@ regularidade.
 
 Mandelbrot, Calvet e Fisher propuseram uma modelagem estatística que
 incorpora essa complexidade: o \textbf{MMAR (Multifractal Model of Asset
-Returns)}(Benoit B. Mandelbrot et al., 1997). Nesse modelo, os retornos
-de um ativo \(X(t)\) são representados como um movimento browniano
-fracionário subordinado por um tempo multifractal \(\theta(t)\), isto é:
+Returns)}(Benoit B. Mandelbrot, Fisher, e Calvet 1997). Nesse modelo, os
+retornos de um ativo \(X(t)\) são representados como um movimento
+browniano fracionário subordinado por um tempo multifractal
+\(\theta(t)\), isto é:
 
 \[
 X(t) = B_H(\theta(t)),
@@ -580,7 +578,7 @@ ou flutuações intermitentes e imprevisíveis ao longo do tempo.
 
 Para lidar com essas situações foi proposto um instrumento conceitual e
 computacional elegante: o \textbf{teorema das seções de Lévy}
-(Figueiredo et al., 2004). Em vez de considerar a série
+(Figueiredo et al. 2004). Em vez de considerar a série
 \(X_1, X_2, \dots, X_n\) como uma sequência rígida e arbitrária de
 observações, os autores propõem reordená-la segundo a variância
 acumulada. Isto é, a cada passo, adiciona-se à soma o termo que mais
@@ -640,7 +638,7 @@ técnica é aplicada a diferentes tipos de séries temporais para mostrar
 que a agregação tradicional pode ocultar a estrutura essencial da
 variabilidade, enquanto a abordagem via seções de Lévy a revela.
 
-Um dos primeiros experimentos apresentados (Figueiredo et al., 2004)
+Um dos primeiros experimentos apresentados (Figueiredo et al. 2004)
 envolve séries simuladas com heterocedasticidade controlada. A partir de
 processos do tipo \(X_t = Z_t \cdot \sigma_t\), onde \(Z_t \sim N(0,1)\)
 e \(\sigma_t\) segue uma lei de potência ou uma sequência binária
@@ -653,11 +651,12 @@ esqueleto estatístico da série.
 
 Esse fenômeno aparece com ainda mais força quando se trabalha com séries
 financeiras reais, como os retornos do Ibovespa ou taxas de câmbio
-(Figueiredo et al., 2007). Ao aplicar as seções de Lévy, observou-se que
-os picos de volatilidade tornam-se evidentes e organizados; a média
-aritmética é substituída por um perfil cumulativo que dá peso ao que
-realmente importa e as métricas de erro são significativamente menores
-nas previsões com base em somas de Lévy do que com as tradicionais.
+(Figueiredo, Matsushita, e Gleria 2007). Ao aplicar as seções de Lévy,
+observou-se que os picos de volatilidade tornam-se evidentes e
+organizados; a média aritmética é substituída por um perfil cumulativo
+que dá peso ao que realmente importa e as métricas de erro são
+significativamente menores nas previsões com base em somas de Lévy do
+que com as tradicionais.
 
 Em termos visuais, a diferença é marcante. Isto é, enquanto a média
 cronológica se espalha com ruído, a média baseada nas seções de Lévy
@@ -873,37 +872,37 @@ exceção elegante, mas nem sempre a regra do mundo.
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-calvet2001forecasting}
-Calvet, L., \& Fisher, A. J. (2001). Forecasting multifractal
-volatility. \emph{Journal of Econometrics}, \emph{105}(1), 27--58.
-
-\bibitem[\citeproctext]{ref-figueiredo2004levy}
-Figueiredo, A., Gleria, I., Farias, G., \& Matsushita, R. (2004). A new
-approach based on Levy distributions to study heteroscedastic time
-series. \emph{Physica A: Statistical Mechanics and its Applications},
-\emph{342}(1-2), 308--314.
-
-\bibitem[\citeproctext]{ref-figueiredo2007hetero}
-Figueiredo, A., Matsushita, R., \& Gleria, I. (2007). Heteroscedasticity
-and ultraslow convergence to a Gaussian using Levy variables.
-\emph{Physica A}, \emph{377}(2), 561--570.
+Calvet, Laurent, e Adlai J Fisher. 2001. {«Forecasting multifractal
+volatility»}. \emph{Journal of Econometrics} 105 (1): 27--58.
 
 \bibitem[\citeproctext]{ref-figueiredo2022framework}
-Figueiredo, A., Fonseca, C., Castro, N., \& Matsushita, R. (2022). A
-robust framework for volatility analysis based on Levy sections.
-\emph{Physica A}, \emph{595}, 127066.
+Figueiredo, A, C Fonseca, N Castro, e Raul Matsushita. 2022. {«A robust
+framework for volatility analysis based on Levy sections»}.
+\emph{Physica A} 595: 127066.
 
-\bibitem[\citeproctext]{ref-mandelbrot1997fractal}
-Mandelbrot, Benoît B. (1997). \emph{Fractals and Scaling in Finance:
-Discontinuity, Concentration, Risk}. Springer.
+\bibitem[\citeproctext]{ref-figueiredo2004levy}
+Figueiredo, A, Iram Gleria, G Farias, e Raul Matsushita. 2004. {«A new
+approach based on Levy distributions to study heteroscedastic time
+series»}. \emph{Physica A: Statistical Mechanics and its Applications}
+342 (1-2): 308--14.
+
+\bibitem[\citeproctext]{ref-figueiredo2007hetero}
+Figueiredo, A, Raul Matsushita, e Iram Gleria. 2007.
+{«Heteroscedasticity and ultraslow convergence to a Gaussian using Levy
+variables»}. \emph{Physica A} 377 (2): 561--70.
 
 \bibitem[\citeproctext]{ref-mandelbrot1997multifractal}
-Mandelbrot, Benoit B., Fisher, A., \& Calvet, L. (1997). A multifractal
-model of asset returns. \emph{Cowles Foundation Discussion Paper},
-(1164).
+Mandelbrot, Benoit B, Austin Fisher, e Laurent Calvet. 1997. {«A
+multifractal model of asset returns»}. \emph{Cowles Foundation
+Discussion Paper}, n.º 1164.
+
+\bibitem[\citeproctext]{ref-mandelbrot1997fractal}
+Mandelbrot, Benoît B. 1997. \emph{Fractals and Scaling in Finance:
+Discontinuity, Concentration, Risk}. Springer.
 
 \bibitem[\citeproctext]{ref-taleb2007cisne}
-Taleb, N. N. (2007). \emph{O Cisne Negro: o impacto do altamente
-improvável}. Editora Objetiva.
+Taleb, Nassim Nicholas. 2007. \emph{O Cisne Negro: o impacto do
+altamente improvável}. Editora Objetiva.
 
 \end{CSLReferences}
 
